@@ -1,34 +1,268 @@
 <!DOCTYPE html> <!-- This line for define the html version and this is for HTML5-->
 <html>
-    <head>
-        <!--meta information about the about the page-->
-        <meta charset = "UTF-8"/> <!-- self closing tag -->
-        <meta name = "description" content="This is my first page"/>
-        <meta name="Mohammad" content="v1.0"/>
-        <style>
-            
-            /* CSS code */
-            body{
-                background-color: white;
-            }
-        </style>
-        
-        <script>
-            // JavaScript code
-            console.log("Hello, World!");
-        </script>
-        <link rel="stylesheet" href="">
-        <title>Mohammad Web</title>
-    </head>
-    <body> 
-        <!-- Headings goes from h1 to h6 -->
-        <h1>This is the Heading h1</h1>
-        <h2>This is the Heading h2</h2>
-        <h3>This is the Heading h3</h3>
-        <h4>This is the Heading h4</h4>
-        <h5>This is the Heading h5</h5>
-        <h6>This is the Heading h6</h6> 
-        this is my first page
-        <p>This is a Paragraph </p>
-    </body>
+
+<head>
+    <!--meta information about the about the page-->
+    <meta charset="UTF-8" /> <!-- self closing tag -->
+    <meta name="description" content="This is my first page" />
+    <meta name="Mohammad" content="v1.0" />
+    <style>
+        /* CSS code */
+        body {
+            background-color: white;
+        }
+    </style>
+
+    <script>
+        // JavaScript code
+        console.log("Hello, World!");
+    </script>
+    <link rel="stylesheet" href="">
+    <title>Mohammad Web</title>
+</head>
+
+<body>
+    <!-- #__Headings goes from h1 to h6__# -->
+    <h1 id="Mohammad">This is the Heading h1</h1>
+    <h2>This is the Heading h2</h2>
+    <h3>This is the Heading h3</h3>
+    <h4>This is the Heading h4</h4>
+    <h5>This is the Heading h5</h5>
+    <h6>This is the Heading h6</h6>
+    this is my first page
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <!--
+        #__Block element Vs. inline element__#
+        * Block elements take up the full width available, with a new line before and after.
+        * Inline elements do not start on a new line and only take up as much width as necessary.
+        -->
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <!-- as you can see these Paragraphs has Global attributes like class, hidden...etc -->
+    <!-- Global attributes could be used in any element in the code-->
+    <p class="one">This is a Paragraph</p>
+    <p class="two" hidden>Mohammad ismail</p>
+    <!--talking about image you'll see by default that there are some element attributes that you can use like src, alt..-->
+    <img src="" alt="">
+    <!--
+        !__user agent stylesheet__!
+        * This is the default style that the browser applies to HTML elements.
+        -->
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <!--
+        #__Formatting Elements__#
+        <> b -> Bold
+        <> strong -> Bold => important Text
+        <> i -> Italic
+        <> em -> Emphasized => important Text
+        <> mark -> Highlighted Text
+        <> u -> Underlined Text
+        <> small -> Smaller Text
+        <> del -> Deleted Text
+        <> ins -> Inserted Text
+        <> sub -> Subscript Text
+        <> sup -> Superscript Text
+        -->
+    <p> My name is <b>Mohammad Ismail</b> with b </p>
+    <p> My name is <strong>Mohammad Ismail</strong> with strong</p>
+    <p> My name is <i>Mohammad Ismail</i> with i </p>
+    <p> My name is <em>Mohammad Ismail</em> with em </p>
+    <p> My name is <mark>Mohammad Ismail</mark> with mark </p>
+    <p> My name is <u>Mohammad Ismail</u> with u </p>
+    <p> My name is <small>Mohammad Ismail</small> with small </p>
+    <p> My name is <del>Mohammad Ismail</del> with del </p>
+    <!-- example -->
+    <p><del>$100</del> -> $80</p>
+    <p> My name is <ins>Mohammad Ismail</ins> with ins </p>
+    <p> My name is <sub>Mohammad Ismail</sub> with sub </p>
+    <!-- example -->
+    <p>H<sub>2</sub>O</p>
+    <p> My name is <sup>Mohammad Ismail</sup> with sup </p>
+    <!-- example -->
+    <p>100<sup>0</sup></p>
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <!-- #__Links - Anchor Tag__# -->
+    <!-- * href stands for hypertext reference -->
+    <a href="https://google.com" target="_blank" title="Go to google">Google</a>
+    <a href="https://facebook.com" title="Go to Facebook">Facebook</a> <!-- this is inline element -->
+    <a href="MySummary.html">HTML page</a>
+    <a href="#Mohammad">Paragraph</a>
+    <a href="mailto:imoh40398@gmail.com">Contact me</a>
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <!-- #__Image And Deal With Paths__# -->
+    <!--
+        * src stands for source and alt stands for alternative text
+        -->
+    <img src="https://avatars.githubusercontent.com/u/107750893?s=400&u=fc81cd2a458ed003929b79a33dda3bd0d0d268bd&v=4"
+        alt="my image" width="200" height="200">
+    <img src="missing_image.png" alt="my image" width="200" height="200">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <!-- #__Lists - UL, OL, DL__# -->
+    <!--
+        * li -> List Item
+        * ul -> Unordered List
+        * ol -> Ordered List
+        * dl -> Description List
+            * dt -> Description Term
+            * dd -> Description Definition
+        -->
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>
+            JS
+            <ul>
+                <li>Angular</li>
+                <li>React</li>
+                <li>Vuejs</li>
+            </ul>
+        </li>
+    </ul>
+    <!--<>__________S.Separator__________<>-->
+    <!-- 
+        * some attributes:
+        * reversed -> reverse the order of the list
+        * start -> start the list from a specific number
+        * type -> change the type of the list 
+        * type could be:
+            * 1 -> numbers
+            * A -> uppercase letters
+            * a -> lowercase letters
+            * I -> uppercase roman numerals
+            * i -> lowercase roman numerals
+            note: value in li could be used to change the starting number of the list just like start attribute
+        -->
+    <ol>
+        <li>Name</li>
+        <li>Address</li>
+        <li>ID</li>
+    </ol>
+    <!--<>__________S.Separator__________<>-->
+    <dl>
+        <dt>HTML</dt>
+        <dd>hypertext language</dd>
+        <dd>the first language</dd>
+        <dt>CSS</dt>
+        <dd>cascading style sheet</dd>
+        <dd>the second language</dd>
+        <dt>JS</dt>
+        <dd>JavaScript</dd>
+        <dd>the third language</dd>
+    </dl>
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <!-- #__Tables__# -->
+    <!--
+        * thead  -> Table Head 
+        * tbody  -> Table Body 
+        * tfoot -> Table Foot 
+        *  tr -> Table Row 
+        * td -> Table Data
+        * th -> Table Header Cell (used for table headers to give it a bold look and center the text)
+        note -> don't use border attribute in the table tag, use CSS instead more efficient
+        * caption -> Table Caption (used to give a title to the table)
+        * colspan -> used to merge cells in the same row
+        * rowspan -> used to merge cells in the same column
+        -->
+    <table border="1" cellpadding="10" cellspacing="0">
+        <caption>students Marks</caption>
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <!--<>__________S.Separator__________<>-->
+        <tbody>
+            <tr>
+                <td>Mohammad</td>
+                <td>Ismail</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Ahmad</td>
+                <td>Ismail</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Hassan</td>
+                <td>Ismail</td>
+                <td>80</td>
+            </tr>
+        </tbody>
+        <!--<>__________S.Separator__________<>-->
+        <tfoot>
+            <tr>
+                <td colspan="2">Average</td>
+                <td>90</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <!-- #__Span And Break And Horizontal Rule__# -->
+    <!--
+        * span -> AL-zero said that span is first an inline element that is used to apply styles to a specific part of the text.
+        note: span is some element that don't have any user agent stylesheet formate 
+        * br -> line break
+        * hr -> horizontal rule (used to create a horizontal line)
+        -->
+    <p>
+        This is <span style="color:red">Span</span> example
+    </p>
+    <!--<>__________S.Separator__________<>-->
+    <p>
+        This is a paragraph with a <br> line break example
+    </p>
+    <!--<>__________S.Separator__________<>-->
+    <hr>
+    <p> This is a paragraph with a horizontal rule example </p> <!--block element-->
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <!-- #__Div And How To Use__# -->
+    <!--
+        * div -> this tag is the most important tag in html you will need to use it a lot.
+        * its like a container to elements.
+        -->
+    <div style="background-color: red; text-align: center;">
+        <h2>Div Example</h2>
+        <p>This is a paragraph inside a div</p>
+        <p>This is another paragraph inside the same div</p>
+    </div>
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <!-- #__HTML Entities__ -->
+    <!--
+        * HTML entities are used to display special characters that are not allowed in HTML.
+        -->
+    <p>This example is all about HTML entities &lt;p&gt;</p>
+    <ul>
+        <li> &amp; (ampersand)</li>
+        <li> &lt; (less than)</li>
+        <li> &gt; (greater than)</li>
+        <li> &quot; (double quote)</li>
+        <li> &#39; (single quote)</li>
+        <li> &nbsp; (non-breaking space)</li>
+        <li> &copy; (copyright symbol)</li>
+        <li> &reg; (registered trademark symbol)</li>
+        <li> &euro; (euro symbol)</li>
+        <li> &pound; (pound symbol)</li>
+    </ul>
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <!-- #__Semantic Elements__# -->
+    <!--
+    ! in HTML5 there was an update to make divisions more realistic like so:
+        * 1) <nav>......</nav> : this is the navigation tag we use it to create a navigation bar
+        * this tag is logically used once per page. 
+        * 2) <main>......</main> : this tag is like the main div in the page.
+        * this tag is logically used once per page. 
+        * 3) <section>......</section> : we use this tag to separate the page content.
+        * this tag is logically used as many times as you want it may contain its own header and footer tags. 
+        * 4) <article>......</article> : this tag is used to create text article as a one block.
+        * 5) <header>......</header> 
+        * 6) <footer>......</footer>  
+        * 7) <aside>......</aside>
+        * 8) <figure>......</figure> 
+        * 9) <figcaption>......</figcaption>
+        * 10) <details>......</details>
+        * 11) <summary>......</summary>
+        * 12) <time>......</time> 
+    -->
+</body>
 </html>
