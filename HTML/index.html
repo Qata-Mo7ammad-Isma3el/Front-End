@@ -440,7 +440,22 @@
             * select: it is used to create a drop-down list that allows the user to select one or more options from a list of options.
             * textarea: it is used to create a multi-line text input field that allows the user to enter a large amount of text.
     -->
-    <form action="" method="GET">
+    <!-- #__Form Part 8 - File, Search, Url__# -->
+    <!--
+            * file: it is used to create a file input field that allows the user to select a file from their computer.
+            * search: it is used to create a search input field that allows the user to enter a search query.
+            * url: it is used to create a URL input field that allows the user to enter a URL. 
+            * date: it is used to create a date input field that allows the user to select a date.
+            * month: it is used to create a month input field that allows the user to select a month.
+            * time: it is used to create a time input field that allows the user to select a time.
+    -->
+    <!-- #__Form Part 9 - Data List, Novalidate, Target__# -->
+    <!-- 
+            * datalist: it is used to create a list of predefined options that the user can select from.
+            * novalidate: it is used to specify that the form should not be validated when it is submitted.
+            * target: it is used to specify where the response from the server should be displayed when the form is submitted.
+    -->
+    <form action="" method="GET" novalidate target="_blank">
         <div>
             <input type="hidden" value="hidden value" name="hiddenField">
         </div>
@@ -503,6 +518,74 @@
             <br>
             <input id="lin_2" type="checkbox" name="OS" value="linux">
             <label for="lin_2">linux</label>
+        </div>
+        <br>
+        <div>
+            <label for="select">Select:</label>
+            <select id="select" name="select" multiple>
+                <optgroup label="Group 0">
+                    <option value="1" selected>Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </optgroup>
+                <optgroup label="Group 1">
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                    <option value="6">Option 6</option>
+                </optgroup>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="textarea">Textarea:</label>
+            <textarea id="textarea" name="textarea" rows="4" cols="50" placeholder="Enter your text here..."></textarea>
+        </div>
+        <br>
+        <div>
+            <label>Upload:</label>
+            <input type="file">
+        </div>
+        <br>
+        <div>
+            <label>Search:</label>
+            <input type="search">
+        </div>
+        <br>
+        <div>
+            <label>Url:</label>
+            <input type="url">
+        </div>
+        <br>
+        <div>
+            <label>Date:</label>
+            <input type="date">
+        </div>
+        <br>
+        <div>
+            <label>Month:</label>
+            <input type="month">
+        </div>
+        <br>
+        <div>
+            <label>Time:</label>
+            <input type="time">
+        </div>
+        <br>
+        <div>
+            <label for="datalist">Datalist:</label>
+            <input list="datalist" name="datalist" placeholder="Select an option:">
+            <datalist id="datalist">
+                <option value="Python">
+                <option value="JavaScript">
+                <option value="PHP">
+                <option value="Java">
+                <option value="C++">
+                <option value="C#">
+                <option value="Ruby">
+                <option value="Swift">
+                <option value="Go">
+                <option value="Kotlin">
+            </datalist>
         </div>
         <br>
         <input type="submit" value="Save">
