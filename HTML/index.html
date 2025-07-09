@@ -1,5 +1,5 @@
 <!DOCTYPE html> <!-- This line for define the html version and this is for HTML5-->
-<html>
+<html lang="en"> <!-- This line for define the language of the page -->
 
 <head>
     <!--meta information about the about the page-->
@@ -502,12 +502,12 @@
             <input id='win_1' type="radio" name="OS" value="Windows" checked>
             <label for="win_1">Windows</label>
             <br>
-            <input id = "mac_1" type="radio" name="OS" value="Mac">
-            <label for = "mac_1">Mac</label>
+            <input id="mac_1" type="radio" name="OS" value="Mac">
+            <label for="mac_1">Mac</label>
             <br>
             <input id="lin_1" type="radio" name="OS" value="linux">
             <label for="lin_1">linux</label>
-        </div> 
+        </div>
         <br>
         <div>
             <input id='win_2' type="checkbox" name="OS" value="Windows" checked>
@@ -590,6 +590,61 @@
         <br>
         <input type="submit" value="Save">
         <input type="reset" value="Reset">
+    </form>
+    <hr style="border: 2px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: red;">Q, BlockQuote, Wbr, Bdi, Button Elements</h1>
+    <!-- #__Q, BlockQuote, Wbr, Bdi, Button__# -->
+    <!--
+            * q: it is used to create a short inline quotation.
+            * blockquote: it is used to create a long block quotation.
+            * button: it is used to create a clickable button.
+            * wbr: it is used to suggest a line break at a specific point in the text.
+            * bdi: it is used to isolate a part of the text from the surrounding text direction.
+            note: wbr stands for "word break opportunity" and bdi stands for "bidirectional isolation".
+            note: keep in mind that these elements are not important but i have to know them.
+    -->
+    <q>This is inline element quotation example.</q> <!--inline element-->
+    <blockquote>This is block element example</blockquote> <!--block element-->
+    <button>Click</button>
+    <p>This is a paragraph with a <wbr> word break opportunity example.</p>
+    <p>This is a paragraph with a <bdi> bidirectional isolation</bdi> example.</p>
+    <hr style="border: 2px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: red;">iFrame, Pre, Code Elements</h1>
+    <!-- #__iFrame, Pre, Code__# -->
+    <!--
+            * code: it is used to display a piece of code.
+            * iFrame: it is used to embed another HTML page within the current page.
+            * pre: it is used to display preformatted text as it is in HTML web page.
+    -->
+    <pre>
+        <code>
+            var x = 10;
+            var y = 20;
+            console.log(x + y);
+        </code>
+    </pre>
+    <iframe src="https://elzero.org/" frameborder="0" width="900" height="500"></iframe>
+    <hr style="border: 2px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: red;">Accessibility Intro</h1>
+    <!-- #__Accessibility Intro__# -->
+    <!--
+            * Accessibility is the practice of making web content usable by people with disabilities.
+            * It is important to make web content accessible to everyone, regardless of their abilities or disabilities.
+            * Some common accessibility practices include:
+                // 1) Using semantic HTML elements to provide structure and meaning to the content.
+                // 2) Providing alternative text for images and other non-text content.
+                // 3) Using ARIA (Accessible Rich Internet Applications) attributes to enhance the accessibility of web applications.
+                // 4) Ensuring that the website is navigable using a keyboard.
+                // 5) Providing captions and transcripts for audio and video content.
+            note: you use lighthouse tool in chrome to check the accessibility of your website. 
+    -->
+    <form action="">
+        <input type="text">
+        <button>Send</button>
+        <button>Reset</button>
     </form>
 </body>
 
