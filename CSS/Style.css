@@ -1,0 +1,48 @@
+
+/* #__Your First Project And Syntax__#  */
+/* 
+#__CSS syntax__# 
+Selector{
+    note: selector could be a tag, class, or id.
+    Property: Value; Property is the style attribute, and value is the value of that property 
+    Property: Value;  Multiple properties can be defined, each on a new line
+} 
+*/
+/* 
+# The Selector can be a tag, class, or id.
+// 1) Tag Selector
+    tagName{
+        Property: Value;
+    }
+# 2) Class Selector
+    .className{
+        Property: Value;
+    }
+
+    3) ID Selector
+    #idName{
+        Property: Value;
+    }
+*/
+p{
+color: red;
+font-size: 40px;
+}
+
+.class_p{
+    color:blue;
+    font-size: 30px;
+}
+/*
+note: it is not recommended to use ID selectors in CSS, as they are unique and can only be used once per page.
+*/
+#id_p{
+    color: green;
+    font-size: 50px;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Element Styling__#  */
+.special{
+    color: blue;
+    font-size: 30px;
+}
