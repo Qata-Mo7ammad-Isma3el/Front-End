@@ -1,5 +1,5 @@
 
-/* #__Your First Project And Syntax__#  */
+/* #__Your First Project And Syntax__# */
 /* 
 #__CSS syntax__# 
 Selector{
@@ -24,10 +24,10 @@ Selector{
         Property: Value;
     }
 */
-p{
+/* p{
 color: red;
 font-size: 40px;
-}
+} */
 
 .class_p{
     color:blue;
@@ -41,8 +41,275 @@ note: it is not recommended to use ID selectors in CSS, as they are unique and c
     font-size: 50px;
 }
 /* <>__________________________________B.Separator_______________________________________<> */
-/* #__Element Styling__#  */
+/* #__Element Styling__# */
 .special{
     color: blue;
     font-size: 30px;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Name Conventions And Rules__# */
+.ex_1{
+color:goldenrod;
+font-size:100px;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Background - Color, Image, Repeat, Attachment, Position, Size__# */
+.ex_2{
+color: white;
+font-size: 30px;
+background-color: lightblue; /* color name */
+background-color: rgb(255 0  0 / 50%); /* Red Green Blue Alpha_Channel*/
+background-color: #000000; /* Hexadecimal */
+background-image:url("..//HTML/media/download.jpg") ;
+background-repeat: no-repeat; /* no-repeat, repeat-x, repeat-y, repeat (The default value) */
+background-attachment: scroll; /* scroll (The default value), fixed, local  */
+background-position: center left ; /* top, bottom, left, right, center, or any combination of these */
+background-position: 50% 50%; /* specific position in pixels */
+background-size: auto; /* contain, cover, auto (The default value), or any specific size */
+background-size: 100% 100%; /* specific size in pixels or percentage */
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Padding__# */
+.ex_3{
+    background-color: lightgreen;
+    /* padding (Shorthand property) is the space between the content and the border in the four directions */
+    /* Top Right Bottom Left */
+    /* 10px 10px 10px 10px */
+    padding: 10px; 
+    /* Top Right Bottom Left */
+    /* 10px 20px 10px 20px*/
+    /* in this case bottom = top, left = right without predefine bottom and left*/
+    padding: 10px 20px;
+    /* Top Right Bottom Left */
+    /* 10px 20px 30px 20px */
+    /* in this case we have 3 values top, right and bottom the left will be equal to right */
+    padding: 10px 20px 30px; 
+    /* Top Right Bottom Left */
+    /* 0px 0px 30px 0px */
+    /* 
+    in this case we want to put padding only in the bottom of the div there is two ways to do so:
+    // 1. padding: 0px 0px 30px 0px; to explicitly define the padding for each side.
+    // 2. padding-bottom: 30px; to use the specific property for the bottom padding.
+    note: you can use the specific property for each side like padding-top, padding-right, padding-bottom, padding-left.
+    */
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-left: 40px;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Margin__# */
+.ex_4{
+    background-color: lightcoral;
+    /* margin (Shorthand property) is the space outside the border in the four directions */
+    /* Top Right Bottom Left */
+    /* 10px 10px 10px 10px */
+    padding: 10px;
+    width: 70%;
+    margin: auto; /*! margin could have negative value */
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Border__# */
+.ex_5{
+background-color: lightpink;
+padding: 10px;
+width: 70%;
+margin: auto;
+/*
+border is a shorthand property it can be used to define the border of an element in one line.
+% Syntax: <line-width> || <line-style> || <color>
+in border we can define multiple things:
+// 1. border-width: the width of the border it can take one value or four values (top, right, bottom, left).
+// 2. border-color: the color of the border it can take one value or four values (top, right, bottom, left).
+// 3. border-style: the style of the border it can take one value or four values (top, right, bottom, left).
+// 4. border-radius: the radius of the border to make the corners rounded.
+note: you can use the specific property for each side like border-top, border-right, border-bottom, border-left.
+also there are some more customization properties like:
+// 1. border-top, border-right, border-bottom, border-left
+// 2. border-top-width, border-right-width, border-bottom-width, border-left-width
+// 3. border-top-color, border-right-color, border-bottom-color, border-left-color
+// 4. border-top-style, border-right-style, border-bottom-style, border-left-style
+
+*/
+border: red solid 5px;/* shorthand property to define the border in one line */
+border-width: 5px;
+border-color: red  blue green yellow; /* you can use multiple colors for each side*/
+border-style: solid dotted dashed double; /* solid, dotted, dashed, double, groove, ridge, inset, outset */
+border-radius: 10px; /* to make the corners of the border rounded */
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Outline__# */
+.ex_6{
+    background-color: lightyellow;
+    width: 300px;
+    padding: 10px;
+    border: 10px solid black; 
+    /* 
+    ! outline is similar to border but it does not take up space and it is not part of the box model
+    note: outline is not customizable like border.
+    if we want to see the difference between border and outline for example:
+    border-style: solid dotted dashed double;
+    % Syntax: <line-style> {1,4}
+    outline-style: solid;
+    % Syntax: auto | <outline-line-style>
+    */
+    outline: 5px solid red; 
+    outline-style: solid; /* solid, dotted, dashed, double, groove, ridge, inset, outset */
+    outline-color: blue; 
+    outline-offset: 3px; /* the space between the outline and the border */
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Display - Block, Inline Block, Inline__# */
+/*
+    <> Block
+        // - Take full width if there is no width defined.
+        // - Add line break before and after the element.
+        // - Respect padding, margin, width, height...(any thing else).
+    <> Inline  
+        // - Don't add any line break.
+        // - Don't respect width and height.
+        // - Respect padding and margin only in left and right.
+        // - Allow Elements before and after it to be in the same line.
+        note: The  other elements dose'nt conceder any padding or margin in top and bottom.
+    <> Inline-Block 
+        // - Respect padding, margin, width, height...(any thing else).
+        // - Allow Elements before and after it to be in the same line.
+    */
+.ex_7_block{
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px;
+    width: 300px; 
+    height: 30px;
+}
+/* <>__________S.Separator__________<> */
+.ex_7_inline{
+    background-color: lightblue;
+    padding: 30px;
+    margin: 10px;
+}
+/* <>__________S.Separator__________<> */
+.ex_7_inline-Block{
+    display: inline-block; 
+    background-color: lightgreen;
+    padding: 30px;
+    margin: 10px;
+    width: 150px;
+    height: 30px;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Element Visibility And Use Cases__# */
+.ex_8 {
+    background-color: lightcoral;
+    margin: 10px 0;
+    width: 100px;
+    height: 100px;
+}
+/* <>__________S.Separator__________<> */
+.ex_8_display {
+    background-color: lightcoral;
+    margin: 10px 0;
+    width: 100px;
+    height: 100px;
+    display: none;
+    /* the element will not be displayed and it will not take up any space */
+    ;
+}
+/* <>__________S.Separator__________<> */
+.ex_8_visibility{
+    background-color: lightcoral;
+    margin: 10px 0;
+    visibility: hidden; /*visible (The default value), hidden, collapse */;
+    width: 100px;
+    height: 100px;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Grouping Multiple Selectors__# */
+.ex_9_one{
+    border-bottom: 2px solid red;
+    color: red;
+}
+/* <>__________S.Separator__________<> */
+.ex_9_two {
+    border-bottom: 2px solid green;
+    color: green;
+}
+/* <>__________S.Separator__________<> */
+.ex_9_three {
+    border-bottom: 2px solid blue;
+    color: blue;
+}
+/* <>__________S.Separator__________<> */
+.ex_9_four {
+    border-bottom: 2px solid black;
+    color: black;
+}
+/* <>__________S.Separator__________<> */
+.ex_9_one,
+.ex_9_two,
+.ex_9_three,
+.ex_9_four {
+    /*
+    note: you can group multiple selectors to apply the same styles to them.
+    note: this is useful to reduce the code and make it more readable.
+    // it's good practice to group selectors that share the same styles. 
+    */
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #EEE;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Nesting__# */
+.ex_10 p{
+    color: red;
+    font-size: 20px;
+}
+.ex_10 .ex_10_p{
+    color: blue;
+    font-size: 30px;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Dimensions - Width And Height__# */
+.ex_11{
+    /*
+    // min-width used to set the minimum width of an element.
+    // max-width used to set the maximum width of an element.
+    // min-height used to set the minimum height of an element.
+    // max-height used to set the maximum height of an element.
+    The main idea behind these properties is to control the size of an element in a flexible way.
+    So that if i want to make sure that the element will not be smaller than a certain size 
+    or larger than a certain size. 
+    we can use these elements to make some sort of range for the element size.
+    note: these properties are not required to be used together, you can use any of them or all of them. 
+
+    */
+    background-color: lightgray;
+    padding: 10px;
+    width: fit-content; /* the width of the element will be based on its content */
+    /* 400 =< width >= 600 */
+    min-width: 400px; /* the minimum width of the element */
+    max-width: 600px; /* the maximum width of the element */
+    /* 50 =< height >= 100 */
+    min-height: 50px; /* the minimum height of the element */
+    max-height: 100px; /* the maximum height of the element */
+    
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Overflow - Overflow-X And Overflow-Y# */
+.ex_12{
+    /*
+        // A) overflow:visible; keep things as it is 
+        // B) overflow:hidden; hide the overflowed part of text
+        // C) overflow:scroll; put some scroller for the text from x-axis and y-axis
+        // D) overflow:auto; in this case things will work automatically if scroll needed it will put it.
+        // we can also use overflow-x , overflow-y. you can control also x-axis and y-axis separately.
+        // we use this to handle the content overflow in any div. 
+    */
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    margin: 20px auto;
+    border-radius: 6px;
+    overflow-y: scroll; /* visible (The default value), hidden, scroll, auto */
 }

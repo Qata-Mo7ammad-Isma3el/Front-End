@@ -5,6 +5,13 @@
     <title>CSS</title> <!--CSS stands for Cascade Style Sheet-->
     <!-- //__External Style__// -->
     <link rel="stylesheet" href="../CSS/Style.css">
+    <!--
+    * HTML web page can have multiple stylesheets linked to it.
+    * these css files could be some master stylesheets or some specific stylesheets for certain components.
+    example:
+    * suppose that you have a website with multiple languages, lets say English and Arabic.
+    * you can have a separate stylesheet for each language, and link them all to the same HTML document.
+    -->
     <!-- //__Internal Style__// -->
     <style></style>
     <!-- //__Inline style__// -->
@@ -33,9 +40,129 @@
     <!--<>__________________________________B.Separator_______________________________________<>-->
     <h1 style="color: purple;">Element Styling</h1>
     <!-- #__Element Styling__# -->
-    <p>This is a Paragraph</p>
-    <p>This is a Paragraph</p>
     <p class="special">This is a Paragraph</p>
-    <p>This is a Paragraph</p>
+    <p class="special">This is a Paragraph</p>
+    <p class="special">This is a Paragraph</p>
+    <p class="special">This is a Paragraph</p>
+    <hr style="border: 3px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: purple;">Name Conventions And Rules</h1>
+    <!-- #__Name Conventions And Rules__# -->
+    <!--
+    // class and id are called identifiers in CSS.
+    // these attributes are used to select and style specific elements in the HTML document. 
+    # Name Conventions And Rules:
+    // 1. Class names start with a dot (.) and can contain letters, numbers, hyphens (-), and underscores (_).
+    // 2. ID names start with a hash (#) and can also contain letters, numbers, hyphens (-), and underscores (_).
+    note: class names cant start with a number, but they can contain numbers after the first character. 
+    note: as will as id names.
+    // best practice is to use lowercase letters for class and id names, and separate words with hyphens or underscores for readability.
+    -->
+    <div>Div</div>
+    <div class="ex_1">Div</div>
+    <div id="ex_1">Div</div>
+    <hr style="border: 3px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: purple;">Background - Color, Image, Repeat, Attachment, Position, Size</h1>
+    <!-- #__Background - Color, Image, Repeat, Attachment, Position, Size__# -->
+    <div class="ex_2">
+        <h2>Product Title</h2>
+        <p>This is Paragraph</p>
+        <p>This is Paragraph</p>
+        <p>This is Paragraph</p>
+        <p>This is Paragraph</p>
+        <p>This is Paragraph</p>
+    </div>
+    <hr style="border: 3px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: purple;">Padding</h1>
+    <!-- #__Padding__# -->
+    <div class="ex_3">
+        <h2>Product Title</h2>
+        <p>This is Paragraph</p>
+    </div>
+    <hr style="border: 3px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: purple;">Margin</h1>
+    <!-- #__Margin__# -->
+    <div class="ex_4">
+        <h2>Product Title</h2>
+        <p>This is Paragraph</p>
+    </div>
+    <hr style="border: 3px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: purple;">Border</h1>
+    <!-- #__Border__# -->
+    <div class="ex_5">
+        <h2>Product Title</h2>
+        <p>This is Paragraph</p>
+    </div>
+    <hr style="border: 3px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: purple;">Outline</h1>
+    <!-- #__Outline__# -->
+    <div class="ex_6">
+        <h2>Product Title</h2>
+        <p>This is Paragraph</p>
+    </div>
+    <hr style="border: 3px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: purple;">Display - Block, Inline Block, Inline</h1>
+    <!-- #__Display - Block, Inline Block, Inline__# -->
+    <div class="ex_7_block"> Div => Block</div>
+    <div class="ex_7_block"> Div => Block</div>
+    <div class="ex_7_block"> Div => Block</div>
+    <!--<>__________S.Separator__________<>-->
+    <span class="ex_7_inline"> Span => Inline</span>
+    <span class="ex_7_inline"> Span => Inline</span>
+    <span class="ex_7_inline"> Span => Inline</span>
+    <!--<>__________S.Separator__________<>-->
+    <br><br><br>
+    <span class="ex_7_inline-Block"> Span => Inline-Block</span>
+    <span class="ex_7_inline-Block"> Span => Inline-Block</span>
+    <span class="ex_7_inline-Block"> Span => Inline-Block</span>
+    <hr style="border: 3px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: purple;">Element Visibility And Use Cases</h1>
+    <!-- #__Element Visibility And Use Cases__# -->
+    <div class="ex_8">Div</div>
+    <div class="ex_8_display">Div</div>
+    <div class="ex_8_visibility">Div</div>
+    <hr style="border: 3px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: purple;">Grouping Multiple Selectors</h1>
+    <!-- #__Grouping Multiple Selectors__# -->
+    <div class="ex_9_one">One</div>
+    <div class="ex_9_two">Two</div>
+    <div class="ex_9_three">Three</div>
+    <div class="ex_9_four">Four</div>
+    <hr style="border: 3px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: purple;">Nesting</h1>
+    <!-- #__Nesting__# -->
+    <div class="ex_10">
+        <h2>Title</h2>
+        <p>This is a paragraph inside Div</p>
+        <p class="ex_10_p">This is a paragraph inside Div with class</p>
+    </div>
+    <p class="ex_10_p">This is a paragraph outside Div with class</p>
+    <hr style="border: 3px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: purple;">Dimensions - Width And Height</h1>
+    <!-- #__Dimensions - Width And Height__# -->
+    <div class="ex_11">Mohammad Ismail</div>
+    <hr>
+    <div class="ex_11">Mohammad Ismail Abd-Alqader</div>
+    <hr>
+    <div class="ex_11">Mohammad Ismail Abd-Alqader Ismail </div>
+    <hr style="border: 3px solid black;">
+    <!--<>__________________________________B.Separator_______________________________________<>-->
+    <h1 style="color: purple;">Overflow - Overflow-X And Overflow-Y</h1>
+    <!-- #__Overflow - Overflow-X And Overflow-Y__# -->
+    <div class="ex_12">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Itaque accusamus temporibus cumque odio illo, labore nostrum consequuntur alias ducimus numquam 
+        minima rerum magnam ab in distinctio facere aperiam eveniet voluptas!
+    </div>
 </body>
 </html>
