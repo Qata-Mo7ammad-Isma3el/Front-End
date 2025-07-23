@@ -296,7 +296,7 @@ border-radius: 10px; /* to make the corners of the border rounded */
     
 }
 /* <>__________________________________B.Separator_______________________________________<> */
-/* #__Overflow - Overflow-X And Overflow-Y# */
+/* #__Overflow - Overflow-X And Overflow-Y__# */
 .ex_12{
     /*
         // A) overflow:visible; keep things as it is 
@@ -311,5 +311,19 @@ border-radius: 10px; /* to make the corners of the border rounded */
     background-color: lightblue;
     margin: 20px auto;
     border-radius: 6px;
-    overflow-y: scroll; /* visible (The default value), hidden, scroll, auto */
+    overflow-x: auto; /* visible (The default value), hidden, scroll, auto */
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Text - Color And Shadow__# */
+/*
+    - Text Color:
+        // background-color
+        // color
+    - Text Shadow
+    % Syntax => text-shadow: H-Shadow, V-Shadow, Blur, color
+*/
+.ex_13{
+    /* background-color: #008cff; */
+    /* color: green; */
+    text-shadow: 1px 1px 1px blue;
 }
