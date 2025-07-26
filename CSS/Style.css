@@ -327,3 +327,85 @@ border-radius: 10px; /* to make the corners of the border rounded */
     /* color: green; */
     text-shadow: 1px 1px 1px blue;
 }
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Text - Alignment__# */
+/*
+    - Text Alignment:
+        // text-align: left, right, center, justify
+    - Text Direction:
+        // direction: ltr (The default value), rtl
+    note: text-align is used to align the text inside the element, while direction is used to set the text direction.
+    - Text Vertical Alignment:
+        // vertical-align: baseline (The default value), sub, super, top, text-top, middle, bottom, text-bottom
+*/
+.ex_14 .english{
+    text-align: center; /* left, right, center, justify */
+    direction: ltr; /* ltr (The default value), rtl */
+    font-size: 20px;
+    color: red;
+}
+.ex_14 .arabic{
+    text-align: center; /* left, right, center, justify */
+    direction: rtl; /* ltr (The default value), rtl */
+    font-size: 20px;
+    color: green;
+}
+.ex_14 .with_placeholder{
+    vertical-align: middle; /* baseline (The default value), sub, super, top, text-top, middle, bottom, text-bottom */ 
+    font-size: 20px;
+    color: blue;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Text - Decoration And Transform__# */
+.ex_15{
+    text-decoration: underline; /* none (The default value), underline, overline, line-through, blink */
+    text-transform: capitalize; /* none (The default value), capitalize, uppercase, lowercase */
+    font-size: 30px;
+    color: red;
+}
+.ex_15 .link_ex{
+    text-decoration: none; /* none (The default value), underline, overline, line-through, blink */
+    color: white;
+    font-weight: bold;
+    display: inline-block; 
+    padding:10px; 
+    background-color: black;
+    margin:10;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Text - Spacing__# */
+.ex_16{
+    background-color: #EEE;
+    font-size: 20px;
+    color: blue;
+    width: 100px;
+    letter-spacing: 2px; /* the space between the letters */
+    word-spacing: 5px; /* the space between the words */
+    word-break: break-word; /* normal (The default value), break-all, keep-all, break-word */
+    line-height: 1.2; /* the space between the lines */
+    text-indent: 10px; /* the space before the first line of the text */
+    white-space: normal; /* normal (The default value), nowrap, pre, pre-line, pre-wrap */
+    text-align: justify; /* left, right, center, justify */
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Text - Overflow And Use Cases__# */
+.ex_17{
+    background-color: hsl(0, 0%, 31%);
+    width: 200px;
+    padding: 10px;
+    white-space: nowrap; 
+    overflow: hidden; /* visible (The default value), hidden, scroll, auto */
+    text-overflow: ellipsis; /* clip (The default value), ellipsis, string */
+}
+/* just for testing */
+.ex_17:hover{
+    overflow: visible; /* visible (The default value), hidden, scroll, auto */
+    text-overflow: clip; /* clip (The default value), ellipsis, string */
+    white-space: normal; /* normal (The default value), nowrap, pre, pre-line, pre-wrap */
+}
