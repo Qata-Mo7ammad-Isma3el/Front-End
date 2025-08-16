@@ -1,4 +1,9 @@
 
+hr{
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
 /* #__Your First Project And Syntax__# */
 /* 
 #__CSS syntax__# 
@@ -409,3 +414,174 @@ border-radius: 10px; /* to make the corners of the border rounded */
     text-overflow: clip; /* clip (The default value), ellipsis, string */
     white-space: normal; /* normal (The default value), nowrap, pre, pre-line, pre-wrap */
 }
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Inheritance__# */
+.ex_18{
+    font-family: Arial, sans-serif; 
+    color: black;
+    font-size: 16px; 
+}
+.ex_19{
+    background-color: #EEE;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid #008cff;
+    border-radius: 5px;
+}
+.ex_19 p{
+    border: inherit; 
+    border-radius: inherit;
+    border-color: inherit;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Typography - Font Family__# */
+/* link: https: //fonts.google.com/?icon.size=38&icon.color=%23FFFF55 */
+.ex_20{
+    text-align: center;
+    background-color: #eee;
+    padding:12px;
+    font-family: "Edu NSW ACT Cursive", cursive;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Typography - Font Size And CSS Units__# */
+/*
+CSS Units:
+    - px 
+    - em : Time 
+    - rem : Root Time
+    - percentage
+    - vw: Viewport Width
+Read:
+    - vmin
+    - vh
+! 1em != 16 px
+! 1 em means that if the parent element has a font size of 16px, then 1em = 16px.
+! 1 rem means that if the root element (html) has a font size of 16px, then 1rem = 16px.
+! 1 rem is always relative to the root element (html) font size.
+! 1 em is relative to the font size of the element itself.  
+note: Default Font Size in most browsers is 16px 
+em is relative to the font size of the element itself.
+*/
+
+/* html{
+    font-size: 16px; 
+} */
+.ex_21{
+    text-align: center;
+    background-color: #eee;
+    padding: 12px;
+    font-size: 20px; 
+    font-family: "Edu NSW ACT Cursive", cursive;
+}
+.ex_21 p{
+    font-size: 2rem; /* 2rem = 32px if the root element (html) has a font size of 16px */
+    color: #333;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Typography - Font Style And Variant And Weight__# */
+/*
+Font Style:
+    - normal (The default value)
+    - italic
+    - oblique
+Font Variant:
+    - normal (The default value)
+    - small-caps
+Font Weight:
+    - normal (The default value)
+    - bold
+    - bolder
+    - lighter
+    - 100, 200, 300, 400, 500, 600, 700, 800, 900
+*/
+.ex_22 p{
+    text-align: center;
+    font-size: 40px;
+    font-style: italic; /* normal (The default value), italic, oblique */
+    font-variant: small-caps; /* normal (The default value), small-caps */
+    font-weight: bold;/* normal (The default value), bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900 */
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Mouse Cursor__# */
+.ex_23{
+    text-align: center;
+    font-size: 30px; 
+}
+.ex_23 button{
+    font-size: inherit;
+    background: transparent;
+    color: red;
+    font-weight: bold;
+    border: none;
+    cursor:pointer;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Float And Clear__# */
+/* 
+    Float  
+    Clear 
+*/
+.ex_24{
+    background-color: red;
+    padding:10px;
+    overflow: hidden;
+}
+.ex_24 div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    width: 50%;
+    float: left;
+}
+.ex_24 p{
+    clear:both;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Mastering The CSS Calculation__# */
+/*
+    Content Width Is: 100%
+    6 Spaces  10px * 6 => 60px From Content Width
+    100% - 60px Available Space
+    5 Elements The Width Is: (100% - 60px) / 5
+*/
+.ex_25{
+    margin: 0;
+}
+.ex_25 div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    float: left;
+    width: calc((100% - 60px) / 5);
+    margin-left: 10px;
+}
+.ex_25 p {
+    clear: both;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Opacity__# */
+.ex_26 {
+    text-align: center;
+    padding: 10px;
+    background-color: #eee;
+    width: 300px;
+    height: 100px;
+    margin: 20px auto;
+}
+.ex_26 .one{
+    height: 50px;
+    background-color: red;
+    opacity: 0.5; /* the opacity of the element */
+    /* note: opacity is the transparency of the element, it can take values from 0 to 1 */
+    /* 0 is fully transparent, 1 is fully opaque */
+}
+.ex_26 .two {
+    background-color: red;
+    height: 50px;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Position__# */
