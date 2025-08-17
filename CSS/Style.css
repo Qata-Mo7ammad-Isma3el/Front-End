@@ -585,3 +585,348 @@ Font Weight:
 }
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Position__# */
+/*
+    position:
+        - static (The default value)
+        - relative
+        - absolute
+        - fixed
+        - sticky
+*/
+.ex_27{
+    text-align: center;
+    color: white;
+    width: 200px;
+    padding:10px;
+    
+}
+.ex_27 .one{
+    background-color: red;
+    left: 40px;
+    position: relative;
+}
+.ex_27 .two{
+    background-color: green;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Z-Index__# */
+.ex_28{
+    text-align: center;
+    color: white;
+    width: 50px;
+    
+}
+.ex_28 .one,
+.ex_28 .two,
+.ex_28 .three{
+position: relative;
+}
+.ex_28 .one {
+    background-color: red;
+    left:15px;
+    bottom:15px;
+    z-index: 3; /* the higher the value, the higher the element will be on the z-axis */
+}
+.ex_28 .two {
+    background-color: green;
+    left: 20px;
+    bottom: 30px;
+    z-index: 2; 
+}
+.ex_28 .three {
+    background-color: blue;
+    left: 25px;
+    bottom: 46px;
+    z-index: 1;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Lists Styling__# */
+.ex_29 ul{
+    list-style-type: lower-greek; /* none (The default value), disc, circle, square, decimal, decimal-leading-zero, lower-alpha, upper-alpha, lower-roman, upper-roman */
+    list-style-position: outside; /* inside (The default value), outside */
+    /* list-style short hand syntax: list-style: type position image; */
+    /* list-style: ; */
+    /* list-style-image: url(); */
+}
+.ex_29 ul li{
+    margin-bottom: 20px;
+    background-color: #ccc;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Lists Styling__# */
+.ex_30 table{
+    font-family: Arial, Helvetica, sans-serif;
+    width:100%;
+    border: 1px solid black; /* the border of the table */
+    border-spacing: 0px; /* the space between the cells */
+    border-radius: 2px;
+}
+.ex_30 table td{
+    border: 1px solid black;
+    padding: 15px;
+    background-color:#eee;
+}
+.ex_30 table thead td{
+    background-color: #f44336;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    border-color: black;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Pseudo Classes__# */
+.ex_31 .one {
+    background-color: red;
+    color: white;
+}
+
+.ex_31 .two {
+    background-color: #EEE;
+    width: 100px;
+    height: 100px;
+}
+.ex_31 a{
+    color: blue;
+    text-decoration: none;
+}
+
+.ex_31 p{
+    background-color: #EEE;
+    width: 100px;
+    height: 100px;
+}
+
+.ex_31 a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.ex_31 a:visited {
+    color: green;
+    text-decoration: underline;
+}
+.ch:checked + label{
+    color: green;
+    font-weight: bold;
+}
+.ex_31 div:empty, .ex_31 p:empty {
+    border: 5px solid red;
+    border-radius: 5px;
+}
+
+.ex_31 .in{
+    border: 2px solid black;
+}
+.ex_31 .in:focus{
+    border: 2px solid blue;
+    border-radius: 5px;
+    outline: none; /* remove the default outline */
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Pseudo Elements - First Letter, First Line, Selection__# */
+/* 
+note: the Pseudo classes are callable using (:) and Pseudo elements are callable using (::)
+! there is no difference between using : and :: in CSS, but it is recommended to use :: for Pseudo elements. 
+*/
+.ex_32 .one span {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.ex_32 .two::first-letter {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+.ex_32 .three::first-line {
+    font-weight: bold;
+    color: green;
+}
+.ex_32 .four::selection {
+    background-color: black;
+    color: yellow;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Pseudo Elements - Before, After, Content__# */
+.ex_33 .parent{
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.ex_33 .parent .one{
+    background-color: #eee;
+    padding: 10px;
+    width: 600px;
+    float:left;
+    position: relative;
+}
+
+.ex_33 .parent .one::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    right: -10px;
+    top: 0;
+    background-color: #009688;
+}
+.ex_33 .parent .one::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 0;
+    height: 0;
+    background-color: white;
+    margin-top: -10px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent #009688 transparent transparent;
+}
+
+.ex_33 .parent .user{
+    background-color: #eee;
+    width: 50px;
+    margin-right: 20px;
+    padding:10px;
+    height: 55.5px;
+    float: left;
+    font-size: 50px;
+    text-align: center;
+    
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Pseudo Elements – Content And Training's__# */
+
+.ex_34 .parent {
+    margin-bottom: 20px;
+    overflow: hidden;
+    counter-increment: member-counter;
+}
+
+.ex_34 .parent .one {
+    background-color: #eee;
+    padding: 10px;
+    width: 600px;
+    float: left;
+    position: relative;
+}
+.ex_34 .parent .one::before {
+    content: attr(data-text);
+    display:none;
+}
+.ex_34 .parent .one:hover::before {
+    display: block;
+    background-color: red;
+}
+
+.ex_34 .parent .one::after {
+    content: counter(member-counter);
+    position: absolute;
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+    right: -10px;
+    top: 50%;
+    margin-top: -10px;
+}
+.ex_34 .parent .user {
+    background-color: #eee;
+    width: 50px;
+    margin-right: 20px;
+    padding: 10px;
+    height: 55.5px;
+    float: left;
+    font-size: 50px;
+    text-align: center;
+}
+.ex_34 ul {
+    list-style: none;
+}
+.ex_34 ul li {
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.ex_34 ul li::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #009688 transparent transparent;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Vendor Prefixes__# */
+/*
+
+    Vendors Prefixes
+
+    Chrome
+    Safari
+    Firefox
+    IE, Edge
+    Opera
+
+    [1] New CSS Feature Appeared
+    [2] Browsers Tests The Feature In Version X
+    [3] Browsers Add Prefix To Give Developers The Ability To Use It
+    [4] The Feature Is Fully Supported In Version Y, No Need For Prefix
+
+    -webkit- => Chrome, Safari, New Opera Version
+    -moz- => Firefox
+    -ms- => Ie, Edge
+    -o- => Old Version of Opera
+*/
+
+.ex_35 {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}
+.ex_35 a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 50px;
+    color: red;
+}
+.ex_35 a:hover {
+    color: blue;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+/*
+  [1] Most of Users Is Using Modern Browsers
+  [2] Vs Code Addon To Add The Prefix
+  [3] Task Runner
+*/
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Border Radius__# */
+.ex_36 {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin: 20px auto;
+    border-radius: 6px;
+    /* 
+    border-top-left-radius: 20px 20px;
+    border-bottom-right-radius: 20px; 
+    */
+}
