@@ -930,3 +930,183 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
     border-bottom-right-radius: 20px; 
     */
 }
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Border Radius__# */
+/*
+    H-Shadow | V-Shadow | Blur | Spread | Color | Inset
+*/
+.ex_37{
+    padding: 20px;
+    background-color: #eee;
+    margin: 20px auto;
+    width: 300px;
+    box-shadow: 
+        0 0 10px 0 #F10000,
+        0 0 10px 0 #000,
+        0 0 10px 0 #080,
+        0 0 10px 0 #00f,
+        0 0 10px 0 yellow;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__The Box Model And Box Sizing__# */
+
+/* * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+} */
+.ex_38 .parent{
+    width: 600px;
+    overflow: hidden;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ddd;
+}
+.ex_38 .one{
+    background-color: #eee;
+    width: 300px;
+    float: left;
+    padding:10px;
+    border: 10px solid red;
+    box-sizing: border-box;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Transition__# */
+
+/*
+    Transition:
+        - Duration
+        - Property 
+        - Delay
+        - Timing Function
+*/
+
+.ex_39 {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    /*
+    transition-duration: 1500ms;
+    transition-delay: 500ms;
+    transition-property:margin-left, border-radius, background-color; 
+    /* to select the properties to be transitioned */
+    /* transition-timing-function: ease-in-out;  
+    /* linear, ease, ease-in, ease-out, ease-in-out, step-start, step-end 
+    */
+    box-sizing: border-box;
+    /* for short hand notation */
+    /* property | duration | timing function | delay */
+    transition: border-radius 3s ease-in-out 1s, 
+                margin-left 2s ease-in-out , 
+                background-color 1s ease-in-out;
+    
+}
+.ex_39:hover {
+    border-radius: 100%;
+    margin-left: 300px;
+    background-color: blue;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__!Important Declaration And Use Cases__# */
+.ex_40{
+    background-color: green !important;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__The Margin Collapse__# */
+/*
+    The Margin Collapse
+    [1] Only Vertical Margin Collapse
+    [2] Bigger Margin Wins
+    [3] Margin Collapsing With Elements Without Anything Between
+    [4] Nesting Does Not Prevent Collapse
+*/  
+.ex_41 .parent {
+    overflow: hidden;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    background-color: #eee;
+}
+
+.ex_41 .parent .one,
+.ex_41 .parent .two {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.ex_41 .parent .one {
+    background-color: #ddd;
+}
+.ex_41 .parent .two {
+    background-color: #aaa;
+}
+.ex_41 .parent .two .up{
+    background-color: red;
+    color: white;
+    height: 80px;
+    margin-bottom: 40px;
+}
+.ex_41 .parent .two .down {
+    background-color: green;
+    color: white;
+    height: 80px;
+    margin-top: 40px;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__CSS Variables And Trainings__# */
+
+/*
+    CSS Variables
+        - Global Variable
+        - Local Variable
+        !syntax: var(Variable Name, Fall Back Value)
+*/
+
+:root {
+    /* note: Global Variables */
+    --mainColor: blue;
+    --mainPadding: 10px;
+}
+.ex_42 .main{
+    background-color: var(--mainColor, black);
+    color: white;
+    padding: calc(20px + var(--mainPadding));
+}
+.ex_42 h2{
+    color: var(--mainColor, black);
+    background-color: #eee;
+    padding: var(--mainPadding);
+}
+.ex_42 p {
+    color: var(--mainColor, black);
+    border: 2px solid var(--mainColor, black);
+    padding: var(--mainPadding);
+}
+.ex_42 a:hover{
+    color: var(--mainColor, black)
+}
+.local {
+    /* note: Local Variable*/
+    --mainColor: black;
+    background-color: var(--mainColor);
+    color: white;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Flex Box Parent - Direction, Wrap, Flow__# */
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #____# */
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #____# */
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #____# */
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #____# */
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #____# */
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #____# */
+
+
