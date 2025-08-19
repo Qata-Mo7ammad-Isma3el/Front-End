@@ -951,19 +951,21 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__The Box Model And Box Sizing__# */
 
-/* * {
+
+* {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-} */
+}
+
 .ex_38 .parent{
-    width: 600px;
+    width: 650px;
     overflow: hidden;
     margin: 20px auto;
     padding: 20px;
     background-color: #ddd;
 }
-.ex_38 .one{
+.ex_38 .parent .one{
     background-color: #eee;
     width: 300px;
     float: left;
@@ -1096,17 +1098,178 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
 }
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Flex Box Parent - Direction, Wrap, Flow__# */
-/* <>__________________________________B.Separator_______________________________________<> */
-/* #____# */
-/* <>__________________________________B.Separator_______________________________________<> */
-/* #____# */
-/* <>__________________________________B.Separator_______________________________________<> */
-/* #____# */
-/* <>__________________________________B.Separator_______________________________________<> */
-/* #____# */
-/* <>__________________________________B.Separator_______________________________________<> */
-/* #____# */
-/* <>__________________________________B.Separator_______________________________________<> */
-/* #____# */
+/* #__Flex Box Parent - Justify Content__# */
+/*
+    Flexible Box
+        For Parent
+        - display: flex => To Start Flexible Box
+        - flex-direction: row => Default Value
+        - flex-wrap: nowrap => Default Value
+        - flex-flow: [Flex-Direction] + [Flex-Wrap]
+*/
+/* 
+note: for short hand use flex-flow
+! syntax flex-flow: <flex-direction> || <flex-wrap>;
+*/
 
 
+
+
+
+.ex_43 .flex {
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row; /* row (The default value), column, row-reverse, column-reverse */
+    flex-wrap: wrap; /* nowrap (The default value), wrap, wrap-reverse */
+}
+.ex_43 .flex div {
+    background-color: #f00;
+    color: white;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+}
+.ex_43 .float {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+}
+.ex_43 .float div {
+    background-color: #f00;
+    color: white;
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Flex Box Parent - Justify Content__# */
+/* 
+    - justify-content: flex-start=>Default Value
+*/
+.ex_44 .flex {
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; /* flex-start (The default value), flex-end, center, space-between, space-around, space-evenly */
+} 
+
+.ex_44 .flex div {
+    background-color: #f00;
+    color: white;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+}
+
+.ex_44 .float {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.ex_44 .float div {
+    background-color: #f00;
+    color: white;
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Flex Box Parent - Align Items__# */
+/*
+    - align-items: stretch=>Default Value
+*/
+
+.ex_45 .flex {
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center; /* stretch (The default value), flex-start, flex-end, center, baseline */
+}
+
+.ex_45 .flex div {
+    background-color: #f00;
+    color: white;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 20px;
+}
+
+.ex_45 .flex .two,
+.ex_45 .float .two {
+    height: 100px;
+}
+
+.ex_45 .float {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.ex_45 .float div {
+    background-color: #f00;
+    color: white;
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 20px;
+}
+    /* 
+        ! important note:
+        - the justify-content manipulate the space horizontally. 
+        - the align-items manipulate the space vertically.
+    */
+.ex_45 .center {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: blue;
+    color: white;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Flex Box Parent - Align Content__# */
+/*
+    - align-content: stretch=>Default Value
+*/
+.ex_46 .flex {
+    background-color: #eee;
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+.ex_46 .flex div {
+    background-color: #f00;
+    color: white;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 20px;
+}
