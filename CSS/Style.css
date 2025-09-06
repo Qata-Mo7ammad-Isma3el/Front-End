@@ -1,5 +1,4 @@
-
-hr{
+hr {
     border: 3px solid black;
     border-radius: 5px;
 }
@@ -34,53 +33,67 @@ color: red;
 font-size: 40px;
 } */
 
-.class_p{
-    color:blue;
-    font-size: 30px;
-}
-/*
-note: it is not recommended to use ID selectors in CSS, as they are unique and can only be used once per page.
-*/
-#id_p{
-    color: green;
-    font-size: 50px;
-}
-/* <>__________________________________B.Separator_______________________________________<> */
-/* #__Element Styling__# */
-.special{
+.class_p {
     color: blue;
     font-size: 30px;
 }
+
+/*
+note: it is not recommended to use ID selectors in CSS, as they are unique and can only be used once per page.
+*/
+#id_p {
+    color: green;
+    font-size: 50px;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Element Styling__# */
+.special {
+    color: blue;
+    font-size: 30px;
+}
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Name Conventions And Rules__# */
-.ex_1{
-color:goldenrod;
-font-size:100px;
+.ex_1 {
+    color: goldenrod;
+    font-size: 100px;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Background - Color, Image, Repeat, Attachment, Position, Size__# */
-.ex_2{
-color: white;
-font-size: 30px;
-background-color: lightblue; /* color name */
-background-color: rgb(255 0  0 / 50%); /* Red Green Blue Alpha_Channel*/
-background-color: #000000; /* Hexadecimal */
-background-image:url("..//HTML/media/download.jpg") ;
-background-repeat: no-repeat; /* no-repeat, repeat-x, repeat-y, repeat (The default value) */
-background-attachment: scroll; /* scroll (The default value), fixed, local  */
-background-position: center left ; /* top, bottom, left, right, center, or any combination of these */
-background-position: 50% 50%; /* specific position in pixels */
-background-size: auto; /* contain, cover, auto (The default value), or any specific size */
-background-size: 100% 100%; /* specific size in pixels or percentage */
+.ex_2 {
+    color: white;
+    font-size: 30px;
+    background-color: lightblue;
+    /* color name */
+    background-color: rgb(255 0 0 / 50%);
+    /* Red Green Blue Alpha_Channel*/
+    background-color: #000000;
+    /* Hexadecimal */
+    background-image: url("..//HTML/media/download.jpg");
+    background-repeat: no-repeat;
+    /* no-repeat, repeat-x, repeat-y, repeat (The default value) */
+    background-attachment: scroll;
+    /* scroll (The default value), fixed, local  */
+    background-position: center left;
+    /* top, bottom, left, right, center, or any combination of these */
+    background-position: 50% 50%;
+    /* specific position in pixels */
+    background-size: auto;
+    /* contain, cover, auto (The default value), or any specific size */
+    background-size: 100% 100%;
+    /* specific size in pixels or percentage */
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Padding__# */
-.ex_3{
+.ex_3 {
     background-color: lightgreen;
     /* padding (Shorthand property) is the space between the content and the border in the four directions */
     /* Top Right Bottom Left */
     /* 10px 10px 10px 10px */
-    padding: 10px; 
+    padding: 10px;
     /* Top Right Bottom Left */
     /* 10px 20px 10px 20px*/
     /* in this case bottom = top, left = right without predefine bottom and left*/
@@ -88,7 +101,7 @@ background-size: 100% 100%; /* specific size in pixels or percentage */
     /* Top Right Bottom Left */
     /* 10px 20px 30px 20px */
     /* in this case we have 3 values top, right and bottom the left will be equal to right */
-    padding: 10px 20px 30px; 
+    padding: 10px 20px 30px;
     /* Top Right Bottom Left */
     /* 0px 0px 30px 0px */
     /* 
@@ -102,25 +115,28 @@ background-size: 100% 100%; /* specific size in pixels or percentage */
     padding-top: 30px;
     padding-left: 40px;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Margin__# */
-.ex_4{
+.ex_4 {
     background-color: lightcoral;
     /* margin (Shorthand property) is the space outside the border in the four directions */
     /* Top Right Bottom Left */
     /* 10px 10px 10px 10px */
     padding: 10px;
     width: 70%;
-    margin: auto; /*! margin could have negative value */
+    margin: auto;
+    /*! margin could have negative value */
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Border__# */
-.ex_5{
-background-color: lightpink;
-padding: 10px;
-width: 70%;
-margin: auto;
-/*
+.ex_5 {
+    background-color: lightpink;
+    padding: 10px;
+    width: 70%;
+    margin: auto;
+    /*
 border is a shorthand property it can be used to define the border of an element in one line.
 % Syntax: <line-width> || <line-style> || <color>
 in border we can define multiple things:
@@ -136,19 +152,24 @@ also there are some more customization properties like:
 // 4. border-top-style, border-right-style, border-bottom-style, border-left-style
 
 */
-border: red solid 5px;/* shorthand property to define the border in one line */
-border-width: 5px;
-border-color: red  blue green yellow; /* you can use multiple colors for each side*/
-border-style: solid dotted dashed double; /* solid, dotted, dashed, double, groove, ridge, inset, outset */
-border-radius: 10px; /* to make the corners of the border rounded */
+    border: red solid 5px;
+    /* shorthand property to define the border in one line */
+    border-width: 5px;
+    border-color: red blue green yellow;
+    /* you can use multiple colors for each side*/
+    border-style: solid dotted dashed double;
+    /* solid, dotted, dashed, double, groove, ridge, inset, outset */
+    border-radius: 10px;
+    /* to make the corners of the border rounded */
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Outline__# */
-.ex_6{
+.ex_6 {
     background-color: lightyellow;
     width: 300px;
     padding: 10px;
-    border: 10px solid black; 
+    border: 10px solid black;
     /* 
     ! outline is similar to border but it does not take up space and it is not part of the box model
     note: outline is not customizable like border.
@@ -158,10 +179,12 @@ border-radius: 10px; /* to make the corners of the border rounded */
     outline-style: solid;
     % Syntax: auto | <outline-line-style>
     */
-    outline: 5px solid red; 
-    outline-style: solid; /* solid, dotted, dashed, double, groove, ridge, inset, outset */
-    outline-color: blue; 
-    outline-offset: 3px; /* the space between the outline and the border */
+    outline: 5px solid red;
+    outline-style: solid;
+    /* solid, dotted, dashed, double, groove, ridge, inset, outset */
+    outline-color: blue;
+    outline-offset: 3px;
+    /* the space between the outline and the border */
 }
 
 /* <>__________________________________B.Separator_______________________________________<> */
@@ -181,28 +204,31 @@ border-radius: 10px; /* to make the corners of the border rounded */
         // - Respect padding, margin, width, height...(any thing else).
         // - Allow Elements before and after it to be in the same line.
     */
-.ex_7_block{
+.ex_7_block {
     background-color: lightgray;
     padding: 10px;
     margin: 10px;
-    width: 300px; 
+    width: 300px;
     height: 30px;
 }
+
 /* <>__________S.Separator__________<> */
-.ex_7_inline{
+.ex_7_inline {
     background-color: lightblue;
     padding: 30px;
     margin: 10px;
 }
+
 /* <>__________S.Separator__________<> */
-.ex_7_inline-Block{
-    display: inline-block; 
+.ex_7_inline-Block {
+    display: inline-block;
     background-color: lightgreen;
     padding: 30px;
     margin: 10px;
     width: 150px;
     height: 30px;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Element Visibility And Use Cases__# */
 .ex_8 {
@@ -211,6 +237,7 @@ border-radius: 10px; /* to make the corners of the border rounded */
     width: 100px;
     height: 100px;
 }
+
 /* <>__________S.Separator__________<> */
 .ex_8_display {
     background-color: lightcoral;
@@ -221,35 +248,43 @@ border-radius: 10px; /* to make the corners of the border rounded */
     /* the element will not be displayed and it will not take up any space */
     ;
 }
+
 /* <>__________S.Separator__________<> */
-.ex_8_visibility{
+.ex_8_visibility {
     background-color: lightcoral;
     margin: 10px 0;
-    visibility: hidden; /*visible (The default value), hidden, collapse */;
+    visibility: hidden;
+    /*visible (The default value), hidden, collapse */
+    ;
     width: 100px;
     height: 100px;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Grouping Multiple Selectors__# */
-.ex_9_one{
+.ex_9_one {
     border-bottom: 2px solid red;
     color: red;
 }
+
 /* <>__________S.Separator__________<> */
 .ex_9_two {
     border-bottom: 2px solid green;
     color: green;
 }
+
 /* <>__________S.Separator__________<> */
 .ex_9_three {
     border-bottom: 2px solid blue;
     color: blue;
 }
+
 /* <>__________S.Separator__________<> */
 .ex_9_four {
     border-bottom: 2px solid black;
     color: black;
 }
+
 /* <>__________S.Separator__________<> */
 .ex_9_one,
 .ex_9_two,
@@ -264,19 +299,22 @@ border-radius: 10px; /* to make the corners of the border rounded */
     margin: 10px 0;
     background-color: #EEE;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Nesting__# */
-.ex_10 p{
+.ex_10 p {
     color: red;
     font-size: 20px;
 }
-.ex_10 .ex_10_p{
+
+.ex_10 .ex_10_p {
     color: blue;
     font-size: 30px;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Dimensions - Width And Height__# */
-.ex_11{
+.ex_11 {
     /*
     // min-width used to set the minimum width of an element.
     // max-width used to set the maximum width of an element.
@@ -291,18 +329,24 @@ border-radius: 10px; /* to make the corners of the border rounded */
     */
     background-color: lightgray;
     padding: 10px;
-    width: fit-content; /* the width of the element will be based on its content */
+    width: fit-content;
+    /* the width of the element will be based on its content */
     /* 400 =< width >= 600 */
-    min-width: 400px; /* the minimum width of the element */
-    max-width: 600px; /* the maximum width of the element */
+    min-width: 400px;
+    /* the minimum width of the element */
+    max-width: 600px;
+    /* the maximum width of the element */
     /* 50 =< height >= 100 */
-    min-height: 50px; /* the minimum height of the element */
-    max-height: 100px; /* the maximum height of the element */
-    
+    min-height: 50px;
+    /* the minimum height of the element */
+    max-height: 100px;
+    /* the maximum height of the element */
+
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Overflow - Overflow-X And Overflow-Y__# */
-.ex_12{
+.ex_12 {
     /*
         // A) overflow:visible; keep things as it is 
         // B) overflow:hidden; hide the overflowed part of text
@@ -316,8 +360,10 @@ border-radius: 10px; /* to make the corners of the border rounded */
     background-color: lightblue;
     margin: 20px auto;
     border-radius: 6px;
-    overflow-x: auto; /* visible (The default value), hidden, scroll, auto */
+    overflow-x: auto;
+    /* visible (The default value), hidden, scroll, auto */
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Text - Color And Shadow__# */
 /*
@@ -327,7 +373,7 @@ border-radius: 10px; /* to make the corners of the border rounded */
     - Text Shadow
     % Syntax => text-shadow: H-Shadow, V-Shadow, Blur, color
 */
-.ex_13{
+.ex_13 {
     /* background-color: #008cff; */
     /* color: green; */
     text-shadow: 1px 1px 1px blue;
@@ -344,84 +390,110 @@ border-radius: 10px; /* to make the corners of the border rounded */
     - Text Vertical Alignment:
         // vertical-align: baseline (The default value), sub, super, top, text-top, middle, bottom, text-bottom
 */
-.ex_14 .english{
-    text-align: center; /* left, right, center, justify */
-    direction: ltr; /* ltr (The default value), rtl */
+.ex_14 .english {
+    text-align: center;
+    /* left, right, center, justify */
+    direction: ltr;
+    /* ltr (The default value), rtl */
     font-size: 20px;
     color: red;
 }
-.ex_14 .arabic{
-    text-align: center; /* left, right, center, justify */
-    direction: rtl; /* ltr (The default value), rtl */
+
+.ex_14 .arabic {
+    text-align: center;
+    /* left, right, center, justify */
+    direction: rtl;
+    /* ltr (The default value), rtl */
     font-size: 20px;
     color: green;
 }
-.ex_14 .with_placeholder{
-    vertical-align: middle; /* baseline (The default value), sub, super, top, text-top, middle, bottom, text-bottom */ 
+
+.ex_14 .with_placeholder {
+    vertical-align: middle;
+    /* baseline (The default value), sub, super, top, text-top, middle, bottom, text-bottom */
     font-size: 20px;
     color: blue;
 }
 
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Text - Decoration And Transform__# */
-.ex_15{
-    text-decoration: underline; /* none (The default value), underline, overline, line-through, blink */
-    text-transform: capitalize; /* none (The default value), capitalize, uppercase, lowercase */
+.ex_15 {
+    text-decoration: underline;
+    /* none (The default value), underline, overline, line-through, blink */
+    text-transform: capitalize;
+    /* none (The default value), capitalize, uppercase, lowercase */
     font-size: 30px;
     color: red;
 }
-.ex_15 .link_ex{
-    text-decoration: none; /* none (The default value), underline, overline, line-through, blink */
+
+.ex_15 .link_ex {
+    text-decoration: none;
+    /* none (The default value), underline, overline, line-through, blink */
     color: white;
     font-weight: bold;
-    display: inline-block; 
-    padding:10px; 
+    display: inline-block;
+    padding: 10px;
     background-color: black;
-    margin:10;
+    margin: 10;
     border-radius: 10px;
     margin: 10px;
 }
 
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Text - Spacing__# */
-.ex_16{
+.ex_16 {
     background-color: #EEE;
     font-size: 20px;
     color: blue;
     width: 100px;
-    letter-spacing: 2px; /* the space between the letters */
-    word-spacing: 5px; /* the space between the words */
-    word-break: break-word; /* normal (The default value), break-all, keep-all, break-word */
-    line-height: 1.2; /* the space between the lines */
-    text-indent: 10px; /* the space before the first line of the text */
-    white-space: normal; /* normal (The default value), nowrap, pre, pre-line, pre-wrap */
-    text-align: justify; /* left, right, center, justify */
+    letter-spacing: 2px;
+    /* the space between the letters */
+    word-spacing: 5px;
+    /* the space between the words */
+    word-break: break-word;
+    /* normal (The default value), break-all, keep-all, break-word */
+    line-height: 1.2;
+    /* the space between the lines */
+    text-indent: 10px;
+    /* the space before the first line of the text */
+    white-space: normal;
+    /* normal (The default value), nowrap, pre, pre-line, pre-wrap */
+    text-align: justify;
+    /* left, right, center, justify */
 }
 
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Text - Overflow And Use Cases__# */
-.ex_17{
+.ex_17 {
     background-color: hsl(0, 0%, 31%);
     width: 200px;
     padding: 10px;
-    white-space: nowrap; 
-    overflow: hidden; /* visible (The default value), hidden, scroll, auto */
-    text-overflow: ellipsis; /* clip (The default value), ellipsis, string */
+    white-space: nowrap;
+    overflow: hidden;
+    /* visible (The default value), hidden, scroll, auto */
+    text-overflow: ellipsis;
+    /* clip (The default value), ellipsis, string */
 }
+
 /* just for testing */
-.ex_17:hover{
-    overflow: visible; /* visible (The default value), hidden, scroll, auto */
-    text-overflow: clip; /* clip (The default value), ellipsis, string */
-    white-space: normal; /* normal (The default value), nowrap, pre, pre-line, pre-wrap */
+.ex_17:hover {
+    overflow: visible;
+    /* visible (The default value), hidden, scroll, auto */
+    text-overflow: clip;
+    /* clip (The default value), ellipsis, string */
+    white-space: normal;
+    /* normal (The default value), nowrap, pre, pre-line, pre-wrap */
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Inheritance__# */
-.ex_18{
-    font-family: Arial, sans-serif; 
+.ex_18 {
+    font-family: Arial, sans-serif;
     color: black;
-    font-size: 16px; 
+    font-size: 16px;
 }
-.ex_19{
+
+.ex_19 {
     background-color: #EEE;
     text-align: center;
     font-size: 20px;
@@ -429,20 +501,23 @@ border-radius: 10px; /* to make the corners of the border rounded */
     border: 2px solid #008cff;
     border-radius: 5px;
 }
-.ex_19 p{
-    border: inherit; 
+
+.ex_19 p {
+    border: inherit;
     border-radius: inherit;
     border-color: inherit;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Typography - Font Family__# */
 /* link: https: //fonts.google.com/?icon.size=38&icon.color=%23FFFF55 */
-.ex_20{
+.ex_20 {
     text-align: center;
     background-color: #eee;
-    padding:12px;
+    padding: 12px;
     font-family: "Edu NSW ACT Cursive", cursive;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Typography - Font Size And CSS Units__# */
 /*
@@ -467,17 +542,20 @@ em is relative to the font size of the element itself.
 /* html{
     font-size: 16px; 
 } */
-.ex_21{
+.ex_21 {
     text-align: center;
     background-color: #eee;
     padding: 12px;
-    font-size: 20px; 
+    font-size: 20px;
     font-family: "Edu NSW ACT Cursive", cursive;
 }
-.ex_21 p{
-    font-size: 2rem; /* 2rem = 32px if the root element (html) has a font size of 16px */
+
+.ex_21 p {
+    font-size: 2rem;
+    /* 2rem = 32px if the root element (html) has a font size of 16px */
     color: #333;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Typography - Font Style And Variant And Weight__# */
 /*
@@ -495,40 +573,46 @@ Font Weight:
     - lighter
     - 100, 200, 300, 400, 500, 600, 700, 800, 900
 */
-.ex_22 p{
+.ex_22 p {
     text-align: center;
     font-size: 40px;
-    font-style: italic; /* normal (The default value), italic, oblique */
-    font-variant: small-caps; /* normal (The default value), small-caps */
-    font-weight: bold;/* normal (The default value), bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900 */
+    font-style: italic;
+    /* normal (The default value), italic, oblique */
+    font-variant: small-caps;
+    /* normal (The default value), small-caps */
+    font-weight: bold;
+    /* normal (The default value), bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900 */
 }
 
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Mouse Cursor__# */
-.ex_23{
+.ex_23 {
     text-align: center;
-    font-size: 30px; 
+    font-size: 30px;
 }
-.ex_23 button{
+
+.ex_23 button {
     font-size: inherit;
     background: transparent;
     color: red;
     font-weight: bold;
     border: none;
-    cursor:pointer;
+    cursor: pointer;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Float And Clear__# */
 /* 
     Float  
     Clear 
 */
-.ex_24{
+.ex_24 {
     background-color: red;
-    padding:10px;
+    padding: 10px;
     overflow: hidden;
 }
-.ex_24 div{
+
+.ex_24 div {
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
@@ -536,9 +620,11 @@ Font Weight:
     width: 50%;
     float: left;
 }
-.ex_24 p{
-    clear:both;
+
+.ex_24 p {
+    clear: both;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Mastering The CSS Calculation__# */
 /*
@@ -547,10 +633,11 @@ Font Weight:
     100% - 60px Available Space
     5 Elements The Width Is: (100% - 60px) / 5
 */
-.ex_25{
+.ex_25 {
     margin: 0;
 }
-.ex_25 div{
+
+.ex_25 div {
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
@@ -559,9 +646,11 @@ Font Weight:
     width: calc((100% - 60px) / 5);
     margin-left: 10px;
 }
+
 .ex_25 p {
     clear: both;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Opacity__# */
 .ex_26 {
@@ -572,17 +661,21 @@ Font Weight:
     height: 100px;
     margin: 20px auto;
 }
-.ex_26 .one{
+
+.ex_26 .one {
     height: 50px;
     background-color: red;
-    opacity: 0.5; /* the opacity of the element */
+    opacity: 0.5;
+    /* the opacity of the element */
     /* note: opacity is the transparency of the element, it can take values from 0 to 1 */
     /* 0 is fully transparent, 1 is fully opaque */
 }
+
 .ex_26 .two {
     background-color: red;
     height: 50px;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Position__# */
 /*
@@ -593,87 +686,104 @@ Font Weight:
         - fixed
         - sticky
 */
-.ex_27{
+.ex_27 {
     text-align: center;
     color: white;
     width: 200px;
-    padding:10px;
-    
+    padding: 10px;
+
 }
-.ex_27 .one{
+
+.ex_27 .one {
     background-color: red;
     left: 40px;
     position: relative;
 }
-.ex_27 .two{
+
+.ex_27 .two {
     background-color: green;
 }
 
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Z-Index__# */
-.ex_28{
+.ex_28 {
     text-align: center;
     color: white;
     width: 50px;
-    
+
 }
+
 .ex_28 .one,
 .ex_28 .two,
-.ex_28 .three{
-position: relative;
+.ex_28 .three {
+    position: relative;
 }
+
 .ex_28 .one {
     background-color: red;
-    left:15px;
-    bottom:15px;
-    z-index: 3; /* the higher the value, the higher the element will be on the z-axis */
+    left: 15px;
+    bottom: 15px;
+    z-index: 3;
+    /* the higher the value, the higher the element will be on the z-axis */
 }
+
 .ex_28 .two {
     background-color: green;
     left: 20px;
     bottom: 30px;
-    z-index: 2; 
+    z-index: 2;
 }
+
 .ex_28 .three {
     background-color: blue;
     left: 25px;
     bottom: 46px;
     z-index: 1;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Lists Styling__# */
-.ex_29 ul{
-    list-style-type: lower-greek; /* none (The default value), disc, circle, square, decimal, decimal-leading-zero, lower-alpha, upper-alpha, lower-roman, upper-roman */
-    list-style-position: outside; /* inside (The default value), outside */
+.ex_29 ul {
+    list-style-type: lower-greek;
+    /* none (The default value), disc, circle, square, decimal, decimal-leading-zero, lower-alpha, upper-alpha, lower-roman, upper-roman */
+    list-style-position: outside;
+    /* inside (The default value), outside */
     /* list-style short hand syntax: list-style: type position image; */
     /* list-style: ; */
     /* list-style-image: url(); */
 }
-.ex_29 ul li{
+
+.ex_29 ul li {
     margin-bottom: 20px;
     background-color: #ccc;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Lists Styling__# */
-.ex_30 table{
+.ex_30 table {
     font-family: Arial, Helvetica, sans-serif;
-    width:100%;
-    border: 1px solid black; /* the border of the table */
-    border-spacing: 0px; /* the space between the cells */
+    width: 100%;
+    border: 1px solid black;
+    /* the border of the table */
+    border-spacing: 0px;
+    /* the space between the cells */
     border-radius: 2px;
 }
-.ex_30 table td{
+
+.ex_30 table td {
     border: 1px solid black;
     padding: 15px;
-    background-color:#eee;
+    background-color: #eee;
 }
-.ex_30 table thead td{
+
+.ex_30 table thead td {
     background-color: #f44336;
     color: #FFF;
     font-weight: bold;
     text-align: center;
     border-color: black;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Pseudo Classes__# */
 .ex_31 .one {
@@ -686,42 +796,50 @@ position: relative;
     width: 100px;
     height: 100px;
 }
-.ex_31 a{
+
+.ex_31 a {
     color: blue;
     text-decoration: none;
 }
 
-.ex_31 p{
+.ex_31 p {
     background-color: #EEE;
     width: 100px;
     height: 100px;
 }
 
-.ex_31 a:hover{
+.ex_31 a:hover {
     color: red;
     text-decoration: underline;
 }
+
 .ex_31 a:visited {
     color: green;
     text-decoration: underline;
 }
-.ch:checked + label{
+
+.ch:checked+label {
     color: green;
     font-weight: bold;
 }
-.ex_31 div:empty, .ex_31 p:empty {
+
+.ex_31 div:empty,
+.ex_31 p:empty {
     border: 5px solid red;
     border-radius: 5px;
 }
 
-.ex_31 .in{
+.ex_31 .in {
     border: 2px solid black;
 }
-.ex_31 .in:focus{
+
+.ex_31 .in:focus {
     border: 2px solid blue;
     border-radius: 5px;
-    outline: none; /* remove the default outline */
+    outline: none;
+    /* remove the default outline */
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Pseudo Elements - First Letter, First Line, Selection__# */
 /* 
@@ -743,10 +861,12 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
     font-size: 60px;
     font-weight: bold;
 }
+
 .ex_32 .three::first-line {
     font-weight: bold;
     color: green;
 }
+
 .ex_32 .four::selection {
     background-color: black;
     color: yellow;
@@ -754,15 +874,16 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
 
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Pseudo Elements - Before, After, Content__# */
-.ex_33 .parent{
+.ex_33 .parent {
     margin-bottom: 20px;
     overflow: hidden;
 }
-.ex_33 .parent .one{
+
+.ex_33 .parent .one {
     background-color: #eee;
     padding: 10px;
     width: 600px;
-    float:left;
+    float: left;
     position: relative;
 }
 
@@ -775,7 +896,8 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
     top: 0;
     background-color: #009688;
 }
-.ex_33 .parent .one::before{
+
+.ex_33 .parent .one::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -789,17 +911,18 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
     border-color: transparent #009688 transparent transparent;
 }
 
-.ex_33 .parent .user{
+.ex_33 .parent .user {
     background-color: #eee;
     width: 50px;
     margin-right: 20px;
-    padding:10px;
+    padding: 10px;
     height: 55.5px;
     float: left;
     font-size: 50px;
     text-align: center;
-    
+
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Pseudo Elements – Content And Training's__# */
 
@@ -816,10 +939,12 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
     float: left;
     position: relative;
 }
+
 .ex_34 .parent .one::before {
     content: attr(data-text);
-    display:none;
+    display: none;
 }
+
 .ex_34 .parent .one:hover::before {
     display: block;
     background-color: red;
@@ -838,6 +963,7 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
     top: 50%;
     margin-top: -10px;
 }
+
 .ex_34 .parent .user {
     background-color: #eee;
     width: 50px;
@@ -848,14 +974,17 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
     font-size: 50px;
     text-align: center;
 }
+
 .ex_34 ul {
     list-style: none;
 }
+
 .ex_34 ul li {
     position: relative;
     padding-left: 10px;
     margin-bottom: 10px;
 }
+
 .ex_34 ul li::before {
     content: "";
     width: 0;
@@ -899,18 +1028,21 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
     -ms-border-radius: 10px;
     border-radius: 10px;
 }
-.ex_35 a{
+
+.ex_35 a {
     text-decoration: none;
     text-align: center;
     font-size: 50px;
     color: red;
 }
+
 .ex_35 a:hover {
     color: blue;
     text-decoration: underline;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
 }
+
 /*
   [1] Most of Users Is Using Modern Browsers
   [2] Vs Code Addon To Add The Prefix
@@ -930,17 +1062,18 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
     border-bottom-right-radius: 20px; 
     */
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Border Radius__# */
 /*
     H-Shadow | V-Shadow | Blur | Spread | Color | Inset
 */
-.ex_37{
+.ex_37 {
     padding: 20px;
     background-color: #eee;
     margin: 20px auto;
     width: 300px;
-    box-shadow: 
+    box-shadow:
         0 0 10px 0 #F10000,
         0 0 10px 0 #000,
         0 0 10px 0 #080,
@@ -958,18 +1091,19 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
     box-sizing: border-box;
 }
 
-.ex_38 .parent{
+.ex_38 .parent {
     width: 650px;
     overflow: hidden;
     margin: 20px auto;
     padding: 20px;
     background-color: #ddd;
 }
-.ex_38 .parent .one{
+
+.ex_38 .parent .one {
     background-color: #eee;
     width: 300px;
     float: left;
-    padding:10px;
+    padding: 10px;
     border: 10px solid red;
     box-sizing: border-box;
 }
@@ -1000,21 +1134,24 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
     box-sizing: border-box;
     /* for short hand notation */
     /* property | duration | timing function | delay */
-    transition: border-radius 3s ease-in-out 1s, 
-                margin-left 2s ease-in-out , 
-                background-color 1s ease-in-out;
-    
+    transition: border-radius 3s ease-in-out 1s,
+        margin-left 2s ease-in-out,
+        background-color 1s ease-in-out;
+
 }
+
 .ex_39:hover {
     border-radius: 100%;
     margin-left: 300px;
     background-color: blue;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__!Important Declaration And Use Cases__# */
-.ex_40{
+.ex_40 {
     background-color: green !important;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__The Margin Collapse__# */
 /*
@@ -1023,7 +1160,7 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
     [2] Bigger Margin Wins
     [3] Margin Collapsing With Elements Without Anything Between
     [4] Nesting Does Not Prevent Collapse
-*/  
+*/
 .ex_41 .parent {
     overflow: hidden;
     margin: auto;
@@ -1039,24 +1176,29 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
     width: 50%;
     height: 100%;
 }
+
 .ex_41 .parent .one {
     background-color: #ddd;
 }
+
 .ex_41 .parent .two {
     background-color: #aaa;
 }
-.ex_41 .parent .two .up{
+
+.ex_41 .parent .two .up {
     background-color: red;
     color: white;
     height: 80px;
     margin-bottom: 40px;
 }
+
 .ex_41 .parent .two .down {
     background-color: green;
     color: white;
     height: 80px;
     margin-top: 40px;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__CSS Variables And Trainings__# */
 
@@ -1072,30 +1214,36 @@ note: the Pseudo classes are callable using (:) and Pseudo elements are callable
     --mainColor: blue;
     --mainPadding: 10px;
 }
-.ex_42 .main{
+
+.ex_42 .main {
     background-color: var(--mainColor, black);
     color: white;
     padding: calc(20px + var(--mainPadding));
 }
-.ex_42 h2{
+
+.ex_42 h2 {
     color: var(--mainColor, black);
     background-color: #eee;
     padding: var(--mainPadding);
 }
+
 .ex_42 p {
     color: var(--mainColor, black);
     border: 2px solid var(--mainColor, black);
     padding: var(--mainPadding);
 }
-.ex_42 a:hover{
+
+.ex_42 a:hover {
     color: var(--mainColor, black)
 }
+
 .local {
     /* note: Local Variable*/
     --mainColor: black;
     background-color: var(--mainColor);
     color: white;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Flex Box Parent - Direction, Wrap, Flow__# */
 /* #__Flex Box Parent - Justify Content__# */
@@ -1122,9 +1270,12 @@ note: for short hand use flex-flow
     padding: 20px;
     margin: 20px auto;
     display: flex;
-    flex-direction: row; /* row (The default value), column, row-reverse, column-reverse */
-    flex-wrap: wrap; /* nowrap (The default value), wrap, wrap-reverse */
+    flex-direction: row;
+    /* row (The default value), column, row-reverse, column-reverse */
+    flex-wrap: wrap;
+    /* nowrap (The default value), wrap, wrap-reverse */
 }
+
 .ex_43 .flex div {
     background-color: #f00;
     color: white;
@@ -1132,6 +1283,7 @@ note: for short hand use flex-flow
     text-align: center;
     padding: 20px;
 }
+
 .ex_43 .float {
     overflow: hidden;
     background-color: #eee;
@@ -1139,6 +1291,7 @@ note: for short hand use flex-flow
     padding: 20px;
     margin: 20px auto;
 }
+
 .ex_43 .float div {
     background-color: #f00;
     color: white;
@@ -1147,6 +1300,7 @@ note: for short hand use flex-flow
     text-align: center;
     padding: 20px;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Flex Box Parent - Justify Content__# */
 /* 
@@ -1159,8 +1313,9 @@ note: for short hand use flex-flow
     margin: 20px auto;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center; /* flex-start (The default value), flex-end, center, space-between, space-around, space-evenly */
-} 
+    justify-content: center;
+    /* flex-start (The default value), flex-end, center, space-between, space-around, space-evenly */
+}
 
 .ex_44 .flex div {
     background-color: #f00;
@@ -1186,6 +1341,7 @@ note: for short hand use flex-flow
     text-align: center;
     padding: 20px;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Flex Box Parent - Align Items__# */
 /*
@@ -1200,7 +1356,8 @@ note: for short hand use flex-flow
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center; /* stretch (The default value), flex-start, flex-end, center, baseline */
+    align-items: center;
+    /* stretch (The default value), flex-start, flex-end, center, baseline */
 }
 
 .ex_45 .flex div {
@@ -1232,7 +1389,8 @@ note: for short hand use flex-flow
     text-align: center;
     padding: 20px;
 }
-    /* 
+
+/* 
         ! important note:
         - the justify-content manipulate the space horizontally. 
         - the align-items manipulate the space vertically.
@@ -1289,17 +1447,19 @@ note: for short hand use flex-flow
     margin: 20px auto;
     display: flex;
 }
+
 .ex_47 .flex div {
     background-color: #f00;
     color: white;
     width: 80px;
     text-align: center;
     padding: 20px;
-    margin-right: 5px; 
+    margin-right: 5px;
     flex-grow: 0;
     flex-shrink: 1;
     /* order: ; */
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Flex Box – Child – Flex Basis, Flex Shorthand__# */
 /* 
@@ -1313,6 +1473,7 @@ note: for short hand use flex-flow
     margin: 20px auto;
     display: inline-flex;
 }
+
 .ex_48 .flex div {
     background-color: #f00;
     color: white;
@@ -1322,15 +1483,17 @@ note: for short hand use flex-flow
     margin-right: 5px;
     flex-grow: 1;
 }
+
 .in {
     display: inline-block;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Flex Box Child - Align Self, Games, Task__# */
 /*
 align-self : auto default value 
 */
-.ex_49 .flex{
+.ex_49 .flex {
     background-color: #eee;
     width: 800px;
     height: 300px;
@@ -1340,7 +1503,8 @@ align-self : auto default value
     align-items: center;
     justify-content: center;
 }
-.ex_49 .flex div{
+
+.ex_49 .flex div {
     background-color: #f00;
     color: white;
     width: 80px;
@@ -1348,16 +1512,287 @@ align-self : auto default value
     padding: 20px;
     margin-right: 5px;
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Filters__# */
-.ex_50 img{
+.ex_50 img {
     transition: .5s;
     filter: grayscale(100%) blur(4px);
     /* filter: blur(2px);
     filter: invert(100%); */
 }
-.ex_50 img:hover{
+
+.ex_50 img:hover {
     filter: grayscale(0%);
 }
+
 /* <>__________________________________B.Separator_______________________________________<> */
 /* #__Gradients__# */
+/* 
+Gradients: 
+linear-gradient(Direction || Angle, Color Stop 1, Color Stop 2, ....)
+Direction: to right (The default value), to left, to top, to bottom, to top right, to top left, to bottom right, to bottom left  
+Deg: 0deg (The default value), 90deg, 180deg, 270deg, 360deg
+*/
+.ex_51 {
+    width: 400px;
+    height: 200px;
+    background-color: #eee;
+    margin: 20px auto;
+    position: relative;
+    padding: 10px;
+}
+
+.ex_51::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    height: 10px;
+    background-image: linear-gradient(to right,
+            #2980b9 20%,
+            #27ae60 20%,
+            #27ae60 40%,
+            #d35400 40%,
+            #d35400 60%,
+            #8e44ad 60%,
+            #8e44ad 80%,
+            #c0392b 80%);
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Pointer Events And Caret Color__# */
+.ex_52 input {
+    caret-color: red;
+}
+
+.ex_52 a {
+    pointer-events: none;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Grid - Parent - Template Columns__# */
+/*
+    * Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, mix]
+    - fraction is greedy, auto is shy
+    - grid-template-rows: [Number Of Rows In]=>[Px, %, Auto, Fraction, Repeat, Mix] 
+    - gap: [Row Gap] [Column Gap]
+    - justify-content 
+    - align-content 
+    - grid-template-areas 
+    * Child 
+    - grid-column: [Grid-Column-Start] [Grid-Column-End] 
+    - grid-row: [Grid-Row-Start] [Grid-Row-End]
+    - grid-area: [Grid-Row-Start] [Grid-Column-Start] [Grid-Row-End] [Grid-Column-End]
+*/
+.ex_53 .parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: 100px repeat(3, 50px) 25% auto 1fr;
+}
+
+.ex_53 .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Grid - Parent - Template Rows And Gap__# */
+.ex_54 .parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px repeat(3, 50px) 25% 25px 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.ex_54 .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Grid - Parent - Justify Content And Align Content__# */
+.ex_55 .parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 600px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.ex_55 .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Grid - Parent - Complete Layout With Template Areas__# */
+.ex_56 * {
+    margin: 0;
+    padding: 0;
+}
+
+.ex_56 .page ul {
+    list-style: none;
+}
+
+.ex_56 .page ul li {
+    display: inline-block;
+}
+
+.ex_56 .page {
+    background-color: #ddd;
+    height: 100vb;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas:
+        "logo logo nav nav nav nav nav nav nav nav"
+        /* !this is for the first raw */
+        "cont cont cont cont cont cont cont . side side"
+        /* !this is for the second raw */
+        "foot foot foot foot foot foot foot foot foot foot";
+}
+
+.ex_56 .page h2 {
+    grid-area: logo;
+    background-color: red;
+    color: white;
+}
+
+.ex_56 .page nav {
+    grid-area: nav;
+    background-color: blue;
+    color: white;
+}
+
+.ex_56 .page section {
+    grid-area: cont;
+    background-color: green;
+    color: white;
+}
+
+.ex_56 .page aside {
+    grid-area: side;
+    background-color: orangered;
+    color: white;
+}
+
+.ex_56 .page footer {
+    grid-area: foot;
+    background-color: black;
+    color: white;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Grid - Child - Grid Column And Grid Row__# */
+.ex_57 .parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 800px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
+    gap: 30px 30px;
+    justify-content: center;
+    align-content: center;
+}
+
+.ex_57 .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+}
+
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Grid - Child - Grid Area And Trainings__# */
+.ex_58 .parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 600px;
+    background-color: #ddd;
+    display: grid;
+    gap: 10px 10px;
+    grid-template-rows: (5, 1fr);
+    grid-template-areas: 
+        "head head nav nav nav"
+        "cont cont cont cont cont";
+}
+
+.ex_58 .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+}
+
+.ex_58 .parent .Child {
+    background-color: green;
+    /* grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 6;
+    grid-column-end: 5; */
+    grid-area: 3/2/6/5;
+}
+/* <>__________________________________B.Separator_______________________________________<> */
+/* #__Grid - Min, Max And Auto Fill__# */
+.ex_59 .parent *{
+    margin: 0;
+}
+.ex_59 .parent {
+    margin: 20px auto;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.ex_59 .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+}
