@@ -6,9 +6,9 @@
 // !important note -> always put you <script> in the end of the html page (sequentially)
 
 // #__Comments And Bad Practice__# //
-// single line comment 
+// single line comment
 /* multiple line comment */
-// note: im not happy to Study this shit 
+// note: im not happy to Study this shit
 
 // #__Output To Screen__# //
 /*
@@ -18,38 +18,325 @@
     - console.log()
     Syntax
 */
-window.alert("Hello World!");
-
+console.log("#-------------------------ex_1-------------------------#");
+// window.alert("Hello World");
+document.write(
+  "<h2> Ex_1 </h2>\
+    <h1>Hello World</h1>\
+    <hr>"
+);
+console.log("Hello world");
 
 // #__Console Methods And Styling And Web API__# //
+/*
+    • Console Methods
+        - log
+        - error
+        - table
+    • Web API
+    • Styling Console
+        - Directive %c
+*/
+console.log("#-------------------------ex_2-------------------------#");
+console.log("log");
+console.error("error");
+console.table(["Mohammad", "Ahmed", "Sayed"]);
+console.log(
+  "%cHello World %cMohammad Ismail",
+  "color: red; font-size: 40px; background-color: yellow",
+  "color: blue; font-size: 40px; background-color: pink"
+);
 
 // #__What Is ECMAScript ?__# //
+/*
+    ES6 stand for ECMAScript 2015
+*/
+console.log("#-------------------------ex_3-------------------------#");
+var my_name = "Mohammad";
+console.log("Hello " + my_name);
+console.log(`Hello ${my_name}`); // template literals
 
 // #__Data Types And typeof Operator__# //
-
+/*
+    • Data Types Intro
+        - String
+        - Number
+        - Array => Object
+        - Object
+        - Boolean
+*/
+console.log("#-------------------------ex_4-------------------------#");
+console.log(
+  "Data Type:" + typeof "Mohammad ismail" + "\nData: Mohammad ismail"
+);
+console.log("Data Type:" + typeof 10 + "\nData:" + 10);
+console.log("Data Type:" + typeof 10.1 + "\nData:" + 10.1);
+console.log("Data Type:" + typeof [1, 2, 3] + "\nData:" + [1, 2, 3]);
+console.log(
+  "Data Type:" +
+    typeof { name: "mohammad", age: 22, country: "Amman" } +
+    "\nData:" +
+    { name: "mohammad", age: 22, country: "Amman" }
+);
+console.log("Data Type:" + typeof true + "\nData:" + true);
+console.log("Data Type:" + typeof null + "\nData:" + null);
+console.log("Data Type:" + typeof undefined + "\nData:" + undefined);
+console.log("Data Type:" + typeof NaN + "\nData:" + NaN);
 // #__Variables Introduction__# //
-
+console.log("#-------------------------ex_5-------------------------#");
+/*
+    • Variables Intro
+        - What Is Variable ?
+        - Why We Use Variables ?
+        - Declare A Variable And Use
+        - Syntax ( Keyword | Variable Name | Assignment Operator | Variable Value )
+        - Variable Without Var
+        - Multiple Variables In The Same Line
+        - Id And Global Variable
+        - Loosely Typed vs Strongly Typed
+*/
+// note: var is optional but best practice to use it
+var user = "mohammad ismail"; // string
+console.log("This is a Variable: " + user);
+document.write(
+  '<h2> Ex_5 </h2>\
+    <div id="global_var">This is a Global Variable</div>\
+    <hr>'
+);
+console.log("This is a Global Variable: " + global_var);
+// global_var.innerHTML = "";
 // #__Identifiers Name Conventions And Rules__# //
+/*
+    • Identifiers
+        - Name Conventions And Rules
+        - Reserved Words
+*/
+// note: i already know this im an AI engineer :)
 
 // #__Var, Let, Const Compare__# //
-
-// #__String Syntax And Characters Escape Sequenc__# //es
+/*
+    • Var
+        - Redeclare (Yes)
+        - Access Before Declare (Undefined)
+        - Variable Scope Drama [Added To Window] ()
+        - Block Or Scope Function
+    • Let
+        - Redeclare (No => Error)
+        - Access Before Declare (Error)
+        - Variable Scope Drama ()
+        - Block Or Scope Function
+    • Const
+        - Redeclare (No => Error)
+        - Access Before Declare (Error)
+        - Variable Scope Drama ()
+        - Block Or Scope Function
+*/
+console.log("#-------------------------ex_6-------------------------#");
+var a = 1;
+let b = 2;
+const c = 3;
+console.log("Var: " + a);
+console.log("Let: " + b);
+console.log("Const: " + c);
+// #__String Syntax And Characters Escape Sequenc__# //
+console.log("#-------------------------ex_7-------------------------#");
+/*
+    • String Syntax + Character Escape Sequences
+        - \ Escape + Line Continue
+        - \n
+        - \"
+        - \t
+*/
+// note: strings can be defined by single quotes or double quotes
+console.log('Mohammad "Ismail"');
+console.log("Mohammad 'Ismail'");
+console.log('Mohammad "Ismail"');
+console.log("Mohammad \\ Ismail 'the best'");
+console.log(
+  "Mohammad \
+    Ismail \
+    the best"
+);
+console.log("Mohammad\nIsmail\nthe best");
 
 // #__Concatenation__# //
+console.log("#-------------------------ex_8-------------------------#");
+/*
+    • Concatenation
+*/
+let fname = "Mohammad";
+let lname = "ismail";
+console.log("Hello " + fname + " " + lname);
 
 // #__Template Literals (Template Strings)__# //
+/*
+    • Template Literals (Template Strings)
+*/
+console.log("#-------------------------ex_9-------------------------#");
+
+// First Example
+let stat1 = "We Love";
+let stat2 = "JavaScript";
+let stat3 = "And";
+let stat4 = "Programming";
+
+console.log(stat1 + " " + stat2 + "\n" + stat3 + " " + stat4);
+console.log(`"${stat1}" '${stat2}'
+\\${stat3}\\ ${stat4}`);
+// Second Example
+
+let title = "Mohammad";
+let desc = "this is my website";
+
+let markup = `
+    <h2> Ex_9 </h2>
+    <div class="card">
+        <div class="child">
+            <h2>${title}</h2>
+            <p>${desc}</p>
+        </div>
+    </div>
+    <hr>
+`;
+document.write(markup);
 
 // #__Variable And Concatenation Challenge__# //
+console.log("#------------------------ex_10------------------------#");
+console.log("Variable And Concatenation Challenge");
+/*
+===========================================
+== Variables And Concatenation Challenge ==
+===========================================
 
+[1] Create 3 Variables [Title, Desctiption, Date]
+-- All In One Statement
+-- Variable Name Must Be Two Words
+-- Title Content Is "Elzero"
+-- Description Content Is "Elzero Web School"
+-- Date Content Is "25/10"
+[2] Create Variable Contains Div And This Div Contains
+-- H3 For Title
+-- P For Paragraph
+-- Span For Time
+[3] Add This Card To Page 4 Times
+[4] Use Template Literals For Concatenate
+
+Extra
+- Use ES6 Repeat
+*/
 // #__Arithmetic Operators__# //
+/*
+    • Arithmetic Operators
+        + Addition
+        - Subtraction
+        * Multiplication
+        / Division
+        ** Exponentiation (ES7)
+        % Modulus (Division Remainder)
+        ++ Increment [ Post / Pre ]
+        -- Decrement [ Post / Pre ]
+*/
+console.log("#------------------------ex_11------------------------#");
+console.log(10 + 20);
+console.log(10 + "Mohammad");
+console.log(10 - 20);
+console.log(10 - "Mohammad"); // NaN
+console.log(typeof NaN);
+console.log(10 * 20);
+console.log(10 * -20);
+console.log(20 / 5);
+console.log(20 / 3);
+console.log(2 ** 4);
+console.log(2 * 2 * 2 * 2);
+console.log(10 % 2);
+console.log(11 % 2); // Remove 1
 
 // #__Unary Plus And Negation Operators__# //
+/*
+    - + Unary Plus [Return Number If Its Not Number]
+    - - Unary Negation [Return Number If Its Not Number + Negates It]
+    • Tests
+        - Normal Number
+        - String Number
+        - String Negative Number
+        - String Text
+        - Float
+        - Hexadecimal Numeral System => 0xFF
+        - null
+        - false
+        - true
+*/
+console.log("#------------------------ex_12------------------------#");
+console.log("Unary Plus:");
+console.log(+100);
+console.log(+"100");
+console.log(+"-100");
+console.log(+"Mohammad");
+console.log(+"15.5");
+console.log(+0xff);
+console.log(+null);
+console.log(+false);
+console.log(+true);
+
+console.log("Unary Negation:");
+console.log(-100);
+console.log(-"100");
+console.log(-"-100");
+console.log(-"Mohammad");
+console.log(-"15.5");
+console.log(-0xff);
+console.log(-null);
+console.log(-false);
+console.log(-true);
+
+// note: you can use Number() function instead of unary plus operator
+console.log("Number Constructor:");
+console.log(Number("100"));
+console.log(Number("Mohammad"));
 
 // #__Type Coercion__# //
+console.log("#------------------------ex_13------------------------#");
+/*
+    • Type Coercion (Type Casting)
+        - +
+        - -
+        - "" - 2
+        - false - true
+*/
+
+console.log(+"10" + 20); // "1020"
+console.log("10" - 20); // -10
+console.log("" - 20); // -20
+console.log(false - true); // -1
+console.log(20 + true); // 21
+console.log(20 + false); // 20
+console.log("10" + 20 + true); // "10201"
+console.log(+"10" + 20 + true); // 31
 
 // #__Assignment Operators__# //
+/*
+    • Assignment Operators
+*/
+console.log("#------------------------ex_14------------------------#");
+
+var a = 10;
+a = a + 20;
+a = a + 70;
+a += 100; // a = a + 100
+a -= 50; // a = a - 50
+a /= 50; // a = a / 50
+console.log(a);
 
 // #__Operators Challenges__# //
+/*
+    • Challenge 1
+*/
+console.log("#------------------------ex_15------------------------#");
+console.log(++10 + +"20"++ + +80++ - +10++); // 100
+console.log(++10 + -"20" + +80++ - -10++ + +10); // 100
+console.log(--80 + +"20" + --10 * +"20"++ - +"20" * 10 + --10 - +true);// 100
+
+
 
 // #__Number__# //
 
