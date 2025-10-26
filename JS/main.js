@@ -464,7 +464,7 @@ console.log("#------------------------ex_19------------------------#");
         - toLowerCase()
         - Chain Methods
 */
-let theName = "  Ahmed  ";
+var theName = "  Ahmed  ";
 
 console.log(theName);
 console.log(theName[1]);
@@ -607,14 +607,14 @@ console.log("#------------------------ex_25------------------------#");
         - else if
         - else
     • If Condition Syntax
-    if (Condition) {
-        // Block Of Code
-    }
+        if (Condition) {
+            // Block Of Code
+        }
 */
-let price = 100;
-let discount = true;
-let discountAmount = 30;
-let country = "KSA";
+var price = 100;
+var discount = true;
+var discountAmount = 30;
+var country = "KSA";
 
 if (discount === true) {
     price -= discountAmount; // price = price - discountAmount
@@ -625,37 +625,402 @@ if (discount === true) {
 } else {
     price -= 10;
 }
-
 console.log(price);
 
 // #__Nested If Conditions__# //
 console.log("#------------------------ex_26------------------------#");
+/*
+    • Nested If
+*/
+
+var price = 100;
+var discount = false;
+var discountAmount = 30;
+var country = "Egypt";
+var student = true;
+
+if (discount === true) {
+    price -= discountAmount;
+} else if (country === "Egypt") {
+    if (student === true) {
+        price -= discountAmount + 30;
+    } else {
+        price -= discountAmount + 10;
+    }
+} else {
+    price -= 10;
+}
+console.log(price);
+
+
 // #__Conditional Ternary Operator__# //
 console.log("#------------------------ex_27------------------------#");
+/*
+    • Conditional (Ternary) Operator
+*/
+
+var theName = "Mona";
+var theGender = "Female";
+var theAge = 30;
+
+if (theGender === "Male") {
+    console.log("Mr");
+} else {
+    console.log("Mrs");
+}
+
+// Condition ? If True : If False
+
+theGender === "Male" ? console.log("Mr") : console.log("Mrs");
+var result = theGender === "Male" ? "Mr" : "Mrs";
+document.write(result);
+console.log(theGender === "Male" ? "Mr" : "Mrs");
+console.log(`Hello ${theGender === "Male" ? "Mr" : "Mrs"} ${theName}`);
+
+theAge < 20
+    ? console.log(20)
+    : theAge > 20 && theAge < 60
+        ? console.log("20 To 60")
+        : theAge > 60
+            ? console.log("Larger Than 60")
+            : console.log("Unknown");
+
+
+
+
 // #__Nullish Coalescing Operator & Logical Or__# //
 console.log("#------------------------ex_28------------------------#");
+/*
+    • Logical Or ||
+        -- Null + Undefined + Any Falsy Values
+    • Nullish Coalescing Operator ??
+        -- Null + Undefined
+*/
+
+console.log(Boolean(100));
+console.log(Boolean(-100));
+console.log(Boolean(0));
+console.log(Boolean(""));
+console.log(Boolean(null));
+var price = 0;
+console.log(`The Price Is ${price || 200}`);
+console.log(`The Price Is ${price ?? 200}`);
+
 // #__If Condition Challenge__# //
 console.log("#------------------------ex_29------------------------#");
+/*
+    • If Condition Challenge
+*/
+
+var a = 10;
+if (a < 10) {
+    console.log(10);
+} else if (a >= 10 && a <= 40) {
+    console.log("10 To 40");
+} else if (a > 40) {
+    console.log("> 40");
+} else {
+    console.log("Unknown");
+}
+
+a < 10 ? console.log(10) :
+    a >= 10 && a <= 40 ? console.log("10 To 40") :
+        a > 40 ? console.log("> 40") :
+            console.log("Unknown");
+
+
+// Write Previous Condition With Ternary If Syntax
+let st = "Elzero Web School";
+if ("????" === "34") { // False
+    console.log("Good1");
+}
+// W Position May Change
+if ("????" === "w") { // False
+    console.log("Good");
+}
+if ("????" !== "string") { //true
+    console.log("Good_string");
+}
+if ("????" === "number") { // False
+    console.log("Good");
+}
+if ("????" === "ElzeroElzero") { // False
+    console.log("Good");
+}
+
 // #__Switch Statement__# //
 console.log("#------------------------ex_30------------------------#");
+/*
+    • Switch Statement
+        switch(expression) {
+            Case 1:
+            // Code Block
+            break;
+        Case 2:
+        // Code Block
+            break;
+        Default:
+        // Code Block
+        }
+    - Default Ordering
+    - Multiple Match
+    - ===
+*/
+
+var day = "A";
+
+switch (day) {
+    default:
+        console.log("Unknown Day");
+        break;
+    case 0:
+        console.log("Saturday");
+        break;
+    case 1:
+        console.log("Sunday");
+        break;
+    case 2:
+    case 3:
+        console.log("Monday");
+        break;
+}
+
+
 // #__Switch And If Condition Challenge__# //
 console.log("#------------------------ex_31------------------------#");
+/*
+    • Switch Challenge
+*/
+
+var job = "Manager";
+var salary = 0;
+
+if (job === "Manager") {
+    salary = 8000;
+} else if (job === "IT" || job === "Support") {
+    salary = 6000;
+} else if (job === "Developer" || job === "Designer") {
+    salary = 7000;
+} else {
+    salary = 4000;
+}
+
+/*
+    • If Challenge
+*/
+
+var holidays = 0;
+var money = 0;
+
+switch (holidays) {
+    case 0:
+        money = 5000;
+        console.log(`My Money is ${money}`);
+        break;
+    case 1:
+    case 2:
+        money = 3000;
+        console.log(`My Money is ${money}`);
+        break;
+    case 3:
+        money = 2000;
+        console.log(`My Money is ${money}`);
+        break;
+    case 4:
+        money = 1000;
+        console.log(`My Money is ${money}`);
+        break;
+    case 5:
+        money = 0;
+        console.log(`My Money is ${money}`);
+        break;
+    default:
+        money = 0;
+        console.log(`My Money is ${money}`);
+}
+
+
 // #__Array Big Introduction__# //
 console.log("#------------------------ex_32------------------------#");
+/*
+    • Arrays
+        - Create Arrays [Two Methods] new Array() + []
+        - Access Arrays Elements
+        - Nested Arrays
+        - Change Arrays Elements
+        - Check For Array Array.isArray(arr);
+*/
+
+var myFriends = ["Ahmed", "Mohamed", "Sayed", ["Marwan", "Ali"]];
+
+console.log(`Hello ${myFriends[0]}`);
+console.log(`Hello ${myFriends[2]}`);
+console.log(`${myFriends[1][2]}`);
+console.log(`Hello ${myFriends[3][1]}`);
+console.log(`${myFriends[3][1][2]}`);
+
+console.log(myFriends);
+myFriends[1] = "Gamal";
+console.log(myFriends);
+myFriends[3] = ["Sameh", "Ameer"];
+console.log(myFriends);
+
+console.log(Array.isArray(myFriends));
+
 // #__Using Length With Array__# //
 console.log("#------------------------ex_33------------------------#");
+/*
+    • Array Methods
+        - Length
+*/
+
+// Index Start From 0 [ 0, 1, 2, 3, 4 ]
+
+var myFriends = ["Ahmed", "Mohamed", "Sayed", "Alaa"];
+myFriends[myFriends.length] = "Ismail";
+myFriends[myFriends.length - 1] = "ismail";
+myFriends.length = 2; // Truncate The Array
+console.log(myFriends);
+
+
 // #__Add And Remove From Array__# //
 console.log("#------------------------ex_34------------------------#");
+/*
+    • Arrays Methods [Adding And Removing]
+        - unshift("", "") Add Element To The First
+        - push("", "") Add Element To The End
+        - shift() Remove First Element From Array
+        - pop() Remove Last Element From Array
+*/
+
+var myFriends = ["Ahmed", "Mohamed", "Sayed", "Alaa"];
+console.log(myFriends);
+
+myFriends.unshift("Osama", "Nabil");
+console.log(myFriends);
+
+myFriends.push("Samah", "Eman");
+console.log(myFriends);
+
+var first = myFriends.shift();
+console.log(myFriends);
+console.log(`First Name Is ${first}`);
+
+var last = myFriends.pop();
+console.log(myFriends);
+console.log(`Last Name Is ${last}`);
+
+
+
 // #__Searching Array__# //
 console.log("#------------------------ex_35------------------------#");
+
+/*
+    • Arrays Methods [Search]
+        - indexOf(Search Element [Mandatory], From Index [Optional])
+        - lastIndexOf(Search Element [Mandatory], From Index [Optional])
+        - includes(valueToFind [Mandatory], fromIndex [Optional]) [ES7]
+*/
+
+var myFriends = ["Ahmed", "Mohamed", "Sayed", "Alaa", "Ahmed"];
+console.log(myFriends);
+
+console.log(myFriends.indexOf("Ahmed"));
+console.log(myFriends.indexOf("Ahmed", 2));
+
+console.log(myFriends.lastIndexOf("Ahmed"));
+console.log(myFriends.lastIndexOf("Ahmed", -2));
+
+console.log(myFriends.includes("Ahmed"));
+console.log(myFriends.includes("Ahmed", 2));
+
+if (myFriends.lastIndexOf("Osama") === -1) {
+    console.log("Not Found");
+}
+
+console.log(myFriends.indexOf("Osama"));
+console.log(myFriends.lastIndexOf("Osama"));
+
 // #__Sorting Array__# //
 console.log("#------------------------ex_36------------------------#");
+/*
+    • Arrays Methods [Sort]
+        - sort(Function [Optional])
+        - reverse()
+*/
+
+var myFriends = [10, "Sayed", "Mohamed", "90", 9000, 100, 20, "10", -20, -10];
+
+console.log(myFriends);
+console.log(myFriends.sort().reverse());
+
+
 // #__Slicing Array__# //
 console.log("#------------------------ex_37------------------------#");
+
+/*
+    • Arrays Methods [Slicing]
+        - slice(Start [Optional], End [Optional] Not Including End)
+            --- slice() => All Array
+            --- If Start Is Undefined => 0
+            --- Negative Count From End
+            --- If End Is Undefined || > Indexes => Slice To The End Array.length
+            --- Return New Array
+        - splice(Start [Mandatory], DeleteCount [Optional] [0 No Remove], The Items To Add [Optional])
+            --- If Negative => Start From The End
+*/
+
+let myFriends = ["Ahmed", "Sayed", "Ali", "Osama", "Gamal", "Ameer"];
+console.log(myFriends);
+console.log(myFriends.slice());
+console.log(myFriends.slice(1));
+console.log(myFriends.slice(1, 3));
+console.log(myFriends.slice(-3));
+console.log(myFriends.slice(1, -2));
+console.log(myFriends.slice(-4, -2));
+console.log(myFriends);
+
+myFriends.splice(1, 2, "Sameer", "Samara");
+console.log(myFriends);
+
+
 // #__Joining Arrays__# //
 console.log("#------------------------ex_38------------------------#");
+
+/*
+    • Arrays Methods [Joining]
+        - concat(array, array) => Return A New Array
+        - join(Separator) => Return A String
+*/
+
+var myFriends = ["Ahmed", "Sayed", "Ali", "Osama", "Gamal", "Ameer"];
+var myNewFriends = ["Samar", "Sameh"];
+var schoolFriends = ["Haytham", "Shady"];
+var allFriends = myFriends.concat(myNewFriends, schoolFriends, "Gameel", [1, 2]);
+
+console.log(allFriends);
+console.log(allFriends.join());
+console.log(allFriends.join(""));
+console.log(allFriends.join(" @ "));
+console.log(allFriends.join("|"));
+console.log(allFriends.join("|").toUpperCase());
+
 // #__Array Challenge__# //
 console.log("#------------------------ex_39------------------------#");
+/*
+    • Array Challenge
+*/
+
+var zero = 0;
+var counter = 3;
+var my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+// Write Code Here
+console.log(my); // ["Osama", "Elham", "Mazero", "Ahmed"];
+console.log(my.slice("????")); // ["Elham", "Mazero"]
+console.log(); // "Elzero"
+console.log(); // "rO"
+
+
 // #__Loop – For and The Concept Of Loop__# //
 console.log("#------------------------ex_40------------------------#");
 // #__Loop On Sequences__# //
