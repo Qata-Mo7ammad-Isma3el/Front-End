@@ -970,7 +970,7 @@ console.log("#------------------------ex_37------------------------#");
             --- If Negative => Start From The End
 */
 
-let myFriends = ["Ahmed", "Sayed", "Ali", "Osama", "Gamal", "Ameer"];
+var myFriends = ["Ahmed", "Sayed", "Ali", "Osama", "Gamal", "Ameer"];
 console.log(myFriends);
 console.log(myFriends.slice());
 console.log(myFriends.slice(1));
@@ -1023,35 +1023,302 @@ console.log(); // "rO"
 
 // #__Loop – For and The Concept Of Loop__# //
 console.log("#------------------------ex_40------------------------#");
+/*
+    • Loop
+        - For
+        for ([1] [2] [3]) {
+            // Block Of Code
+        }
+*/
+for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 5; j++) {
+        console.log("*")
+    }
+}
+
 // #__Loop On Sequences__# //
 console.log("#------------------------ex_41------------------------#");
+
+/*
+    • Loop
+        - Loop On Sequences
+*/
+
+var myFriends = [1, 2, "Osama", "Ahmed", 3, 4, "Sayed", 6, "Ali"];
+var onlyNames = [];
+for (let i = 0; i < myFriends.length; i++) {
+    if (typeof myFriends[i] === "string") {
+        onlyNames.push(myFriends[i]);
+    }
+}
+console.log(onlyNames);
+
+// console.log(myFriends[0]);
+// console.log(myFriends[1]);
+// console.log(myFriends[2]);
+// console.log(myFriends[3]);
+// console.log(myFriends[4]);
+
+// for (let i = 0; i < myFriends.length; i++) {
+//   console.log(myFriends[i]);
+// }
+
 // #__Nested Loops And Trainings__# //
 console.log("#------------------------ex_42------------------------#");
+/*
+    • Loop
+        - Nested Loops
+*/
+
+
+var products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
+var colors = ["Red", "Green", "Black"];
+var models = [2020, 2021];
+
+for (let i = 0; i < products.length; i++) {
+    console.log("#".repeat(15));
+    console.log(`# ${products[i]}`);
+    console.log("#".repeat(15));
+    console.log("Colors: ");
+    for (let j = 0; j < colors.length; j++) {
+        console.log(`- ${colors[j]}`);
+    }
+    console.log("Models: ");
+    for (let k = 0; k < models.length; k++) {
+        console.log(`- ${models[k]}`);
+    }
+}
+
 // #__Loop Control – Break, Continue, Label__# //
 console.log("#------------------------ex_43------------------------#");
+/*
+    • Loop Control
+        - Break
+        - Continue
+        - Label
+*/
+
+var products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
+
+var colors = ["Red", "Green", "Black"];
+
+mainLoop: for (let i = 0; i < products.length; i++) {
+    console.log(products[i]);
+    nestedLoop: for (let j = 0; j < colors.length; j++) {
+        console.log(`- ${colors[j]}`);
+        if (colors[j] === "Green") {
+            break mainLoop;
+        }
+    }
+}
 // #__Loop For – Advanced Example__# //
 console.log("#------------------------ex_44------------------------#");
+/*
+    • Loop For Advanced Example
+*/
+
+var products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor", "iPhone"];
+var i = 0;
+
+for (; ;) {
+    console.log(products[i]);
+    i++;
+    if (i === products.length) break;
+}
 // #__Practice – Add Products To Page__# //
 console.log("#------------------------ex_45------------------------#");
+/*
+    • Products Practice
+*/
+
+var products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor", "iPhone"];
+var colors = ["Red", "Green", "Blue"];
+var showCount = 3;
+
+document.write(`<hr>`)
+document.write(`<h1>Show ${showCount} Products</h1>`);
+
+for (let i = 0; i < showCount; i++) {
+    document.write(`<div>`);
+    document.write(`<h3>[${i + 1}] ${products[i]}</h3>`);
+    for (let j = 0; j < colors.length; j++) {
+        document.write(`<p>${colors[j]}</p>`);
+    }
+    document.write(`<p>${colors.join(" | ")}</p>`);
+    document.write(`</div>`);
+}
+document.write(`<hr>`)
+
 // #__Loop – While__# //
 console.log("#------------------------ex_46------------------------#");
+
+
+
+
 // #__Loop – Do, While__# //
 console.log("#------------------------ex_47------------------------#");
+/*
+    • Loop
+        - While
+        - Do / While
+*/
+
+var products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor", "iPhone"];
+var index = 0;
+
+//> while example
+while (index < products.length) {
+    console.log(products[index]);
+    index += 1;
+}
+//> do / while example
+var i = 0;
+do {
+    console.log(i);
+    i++;
+} while (false);
+
+console.log(i);
+
 // #__Loop Challenge__# //
 console.log("#------------------------ex_48------------------------#");
+
+/*
+    • Loop Challenge
+*/
+
+let myAdmins = ["Ahmed", "Osama", "Sayed", "Stop", "Samera"];
+let myEmployees = ["Amgad", "Samah", "Ameer", "Omar", "Othman", "Amany", "Samia", "Anwar"];
+
+document.write(`<div>We Have X Admins</div>`);
+
+mainLoop: for (let i = 0; i < myAdmins.length; i++) {
+    if (myAdmins[i] === "Stop") {
+        break;
+    }
+    document.write(`<h3>The Admin For Team ${i + 1} Is ${myAdmins[i]}</h3>`);
+    document.write(`<p>Team Members:</p>`);
+    let counter = 1;
+    nestedLoop: for (let j = 0; j < myEmployees.length; j++) {
+        if (myEmployees[j][0] === myAdmins[i][0]) {
+            document.write(`<span>${counter} - ${myEmployees[j]}</span><br>`);
+            counter++;
+        }
+    }
+    document.write(`<hr>`);
+}
+
 // #__Function Intro And Basic Usage__# //
 console.log("#------------------------ex_49------------------------#");
+/*
+    • Function
+        - What Is Function ?
+        - User-Defined vs Built In
+        - Syntax + Basic Usage
+        - Example From Real Life
+        - Parameter + Argument
+        - Practical Example
+*/
+
+
+//! DRY = Don't Repeat Yourself
+function sayHello(userName) {
+    console.log(`Hi ${userName}`);
+}
+
+sayHello("Osama");
+sayHello("Sayed");
+sayHello("Ali");
+
 // #__Function Advanced Example__# //
 console.log("#------------------------ex_50------------------------#");
+/*
+    • Function Advanced Examples
+*/
+
+function sayHello(userName, age) {
+    if (age < 20) {
+        console.log(`App is Not Suitable For You`);
+    } else {
+        console.log(`Hello ${userName} Your Age is ${age}`);
+    }
+}
+
+sayHello("Osama", 38);
+sayHello("Sayed", 40);
+sayHello("Ali", 18);
+
+function generateYears(start, end, exclude) {
+    for (let i = start; i <= end; i++) {
+        if (i === exclude) {
+            continue;
+        }
+        console.log(i);
+    }
+}
+
+generateYears(1982, 2021, 2020);
 // #__Function Return Statement And Use Cases__# //
 console.log("#------------------------ex_51------------------------#");
+/*
+    • Function
+        - Return
+        - Automatic Semicolon Insertion [No Line Terminator Allowed]
+        - Interrupting
+*/
+
+function generate(start, end) {
+    for (let i = start; i <= end; i++) {
+        if (i === 15) {
+            return `Interrupting`;
+        }
+        console.log(i);
+    }
+}
+generate(10, 20);
 // #__Function Default Parameters__# //
 console.log("#------------------------ex_52------------------------#");
+/*
+    • Function
+        - Default Function Parameters
+        - Function Parameters Default [Undefined]
+        - Old Strategies [Condition + Logical Or]
+        - ES6 Method
+*/
+
+function sayHello(username = "Unknown", age = "Unknown") {
+    // if (age === undefined) {
+    //   age = "Unknown";
+    // }
+    // age = age || "Unknown";
+    return `Hello ${username} Your Age Is ${age}`;
+}
+
+console.log(sayHello());
 // #__Function Rest Parameters__# //
 console.log("#------------------------ex_53------------------------#");
+/*
+    • Function
+        - Rest Parameters
+        - Only One Allowed
+        - Must Be Last Element
+*/
+
+function calc(...numbers) {
+    // console.log(Array.isArray(numbers));
+    let result = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        result += numbers[i]; // result = result + numbers[i]
+    }
+    return `Final Result Is ${result}`;
+}
+
+console.log(calc(10, 20, 10, 30, 50, 30));
+
+
 // #__Practice – Ultimate Function__# //
 console.log("#------------------------ex_54------------------------#");
-// #__Random Arguments Function Challenge__# //
+// #__Random Arguments Function Challenge__# //Red | Green | Blu
 console.log("#------------------------ex_55------------------------#");
 // #__Anonymous Function and Use Cases__# //
 console.log("#------------------------ex_56------------------------#");
