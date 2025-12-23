@@ -1318,23 +1318,279 @@ console.log(calc(10, 20, 10, 30, 50, 30));
 
 // #__Practice – Ultimate Function__# //
 console.log("#------------------------ex_54------------------------#");
+/*
+    • Function Advanced Practice
+        - Parameters
+        - Default
+        - Rest
+        - Loop
+        - Condition
+*/
+
+function showInfo(us = "Un", ag = "Un", rt = 0, show = "Yes", ...sk) {
+    document.write(`<div>`);
+    document.write(`<h2>Welcome, ${us}</h2>`);
+    document.write(`<p>Age: ${ag}</p>`);
+    document.write(`<p>Hour Rate: $${rt}</p>`);
+    if (show === "Yes") {
+        if (sk.length > 0) {
+            document.write(`<p>Skills: ${sk.join(" | ")}</p>`);
+        } else {
+            document.write(`<p>Skills: No Skills</p>`);
+        }
+    } else {
+        document.write(`<p>Skills Is Hidden</p>`);
+    }
+    document.write(`</div>`);
+}
+showInfo("Osama", 38, 20, "No", "Html", "CSS");
+
 // #__Random Arguments Function Challenge__# //Red | Green | Blu
 console.log("#------------------------ex_55------------------------#");
+/*
+    • Function - Random Argument Challenge
+    ====================================
+    Create Function showDetails
+    Function Accept 3 Parameters [a, b, c]
+    Data Types For Info Is
+    - String => Name
+    - Number => Age
+    - Boolean => Status
+    Argument Is Random
+    Data Is Not Sorted Output Depend On Data Types
+    - Use Ternary Conditional Operator
+*/
+
+function showDetails(...array) {
+    for (let i = 0; i < array.length; i++) {
+        if (typeof array[i] === "string") {
+            var name = array[i];
+        }
+        else if (typeof array[i] === "number") {
+            var age = array[i];
+        }
+        else if (typeof array[i] === "boolean") {
+            var status = array[i];
+        }
+    }
+    console.log(`Hello ${name}, Your Age Is ${age}, You Are ${status ? "Available" : "Not Available"} For Hire`);
+}
+
+showDetails("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+showDetails(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+showDetails(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+showDetails(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire
+
 // #__Anonymous Function and Use Cases__# //
 console.log("#------------------------ex_56------------------------#");
+
+/*
+    • Function
+        - Anonymous Function
+        - Calling Named Function vs Anonymous Function
+        - Argument To Other Function
+        - Task Without Name
+        - SetTimeout
+*/
+
+let calculator = function (num1, num2) {
+    return num1 + num2;
+};
+
+console.log(calculator(10, 20));
+
+
+document.write(`<button id="show" style="padding: 10px 20px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Show Message</button>`);
+document.getElementById("show").onclick = function () {
+    console.log("Hello Osama");
+};
+
+setTimeout(function elzero() {
+    console.log("Good");
+}, 2000);
+
 // #__Return Nested Function__# //
 console.log("#------------------------ex_57------------------------#");
+/*
+    • Function
+        - Function Inside Function
+        - Return Function
+*/
+
+//> Example 1
+function sayMessage(fName, lName) {
+    let message = `Hello`;
+    //> Nested Function
+    function concatMsg() {
+        message = `${message} ${fName} ${lName}`;
+    }
+    concatMsg();
+    return message;
+}
+
+console.log(sayMessage("Osama", "Mohamed"));
+
+//> Example 2
+function sayMessage(fName, lName) {
+    let message = `Hello`;
+    //> Nested Function
+    function concatMsg() {
+        return `${message} ${fName} ${lName}`;
+    }
+    return concatMsg();
+}
+
+console.log(sayMessage("Osama", "Mohamed"));
+
+//> Example 3
+function sayMessage(fName, lName) {
+    let message = `Hello`;
+    //> Nested Function
+    function concatMsg() {
+        function getFullName() {
+            return `${fName} ${lName}`;
+        }
+        return `${message} ${getFullName()}`;
+    }
+    return concatMsg();
+}
+console.log(sayMessage("Osama", "Mohamed"));
+
 // #__Arrow Function Syntax__# //
 console.log("#------------------------ex_58------------------------#");
+/*
+  Function
+  - Arrow Function
+  -- Regular vs Arrow [Param + No Param]
+  -- Multiple Lines
+*/
+
+//> Example 1
+var print = function () {
+    return 10;
+};
+
+var print = () => 10;
+
+var print = function (num) {
+    return num;
+};
+
+//> Example 2
+var print = num => num;
+
+var print = function (num1, num2) {
+    return num1 + num2;
+};
+
+var print = (num1, num2) => num1 + num2;
+
+console.log(print(100, 50));
 // #__Scope – Global And Local__# //
 console.log("#------------------------ex_59------------------------#");
+/*
+    • Scope
+        - Global And Local Scope
+*/
+
+var var1 = 1;
+let var2 = 2;
+
+function showText() {
+    var var1 = 10;
+    let var2 = 20;
+    console.log(`Function - From Local ${var1}`);
+    console.log(`Function - From Local ${var2}`);
+}
+
+console.log(`From Global ${var1}`);
+console.log(`From Global ${var2}`);
+
+showText();
+
+
 // #__Scope – Block__# //
 console.log("#------------------------ex_60------------------------#");
+/*
+    • Scope
+        - Block Scope [If, Switch, For]
+*/
+
+
+//! var will affect globally if you use it inside a block
+var x = 10;
+
+if (10 === 10) {
+    let x = 50;
+    console.log(`From If Block ${x}`);
+}
+
+console.log(`From Global ${x}`);
+
+
 // #__Scope – Lexical (Static)__# //
 console.log("#------------------------ex_61------------------------#");
+
+/*
+    • Scope
+        - Lexical Scope
+    • Search
+        - Execution Context
+        - Lexical Environment
+*/
+
+function parent() {
+    let a = 10;
+
+    function child() {
+        console.log(a);
+        //console.log(`From Child ${b}`);
+
+        function grand() {
+            let b = 100;
+            console.log(`From Grand ${a}`);
+            console.log(`From Grand ${b}`);
+        }
+        grand();
+    }
+    child();
+}
+parent();
+
 // #__Arrow Function Challenge__# //
 console.log("#------------------------ex_62------------------------#");
-// #__Higher Order Functions – Map__# //
+
+/*
+    • Function Arrow Challenges
+*/
+
+// [1] One Statement In Function
+// [2] Convert To Arrow Function
+// [3] Print The Output [Arguments May Change]
+
+let names = function (...array) {
+    return `String [${array.join('], [')}] => Done !`;
+};
+
+console.log(names("Osama", "Mohamed", "Ali", "Ibrahim"));
+// String [Osama], [Mohamed], [Ali], [Ibrahim] => Done !
+
+/* ================================= */
+
+// [1] Replace ??? In Return Statement To Get The Output
+// [2] Create The Same Function With Regular Syntax
+// [3] Use Array Inside The Arguments To Get The Output
+
+let myNumbers = [20, 50, 10, 60];
+
+var calc = (one, two, ...nums) => {
+    return one + two;
+};
+
+console.log(calc(10, 20, ...myNumbers)); // 80
+
+
+// #__Higher Order Functions – Map__ //
 console.log("#------------------------ex_63------------------------#");
 // #__Higher Order Functions – Map Practice__# //
 console.log("#------------------------ex_64------------------------#");
