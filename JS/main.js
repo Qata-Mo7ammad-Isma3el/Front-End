@@ -2263,6 +2263,7 @@ document.write(`
     <hr>
     <div>Div</div>
     <p class="para" title="Paragraph" data-src="Testing">Paragraph</p>
+    <hr>
 `);
 
 var len = document.getElementsByTagName("p").length;
@@ -2290,27 +2291,371 @@ if (document.getElementsByTagName("div")[0].hasAttributes()) {
 } else {
     console.log(`Div Has No Attributes`);
 }
-
 // #__Create And Append Elements__# //
 console.log("#------------------------ex_81------------------------#");
+/*
+    • DOM [Create Elements]
+        - createElement
+        - createComment
+        - createTextNode
+        - createAttribute
+        - appendChild
+*/
+
+var myElement = document.createElement("div");
+var myAttr = document.createAttribute("data-custom");
+var myText = document.createTextNode("Product One");
+var myComment = document.createComment("This Is Div");
+
+myElement.className = "product";
+myElement.setAttributeNode(myAttr);
+myElement.setAttribute("data-test", "Testing");
+
+// Append Comment To Element
+myElement.appendChild(myComment);
+
+// Append Text To Element
+myElement.appendChild(myText);
+
+// Append Element To Body
+document.body.appendChild(myElement);
+
+document.write(`<hr>`);
+
 // #__Product With Heading And Paragraph Practice__# //
 console.log("#------------------------ex_82------------------------#");
+/*
+    • DOM [Create Elements]
+        - Practice Product With Heading And Paragraph
+*/
+
+var myMainElement = document.createElement("div");
+var myHeading = document.createElement("h2");
+var myParagraph = document.createElement("p");
+
+var myHeadingText = document.createTextNode("Product Title");
+var myParagraphText = document.createTextNode("Product Description");
+
+// Add Heading Text
+myHeading.appendChild(myHeadingText);
+
+// Add Heading To Main Element
+myMainElement.appendChild(myHeading);
+
+// Add Paragraph Text
+myParagraph.appendChild(myParagraphText);
+
+// Add Paragraph To Main Element
+myMainElement.appendChild(myParagraph);
+
+myMainElement.className = "product";
+
+document.body.appendChild(myMainElement);
+document.write(`<hr>`);
+
 // #__Deal With Children__# //
 console.log("#------------------------ex_83------------------------#");
+/*
+  DOM [Deal With Childrens]
+  - children
+  - childNodes
+  - firstChild
+  - lastChild
+  - firstElementChild
+  - lastElementChild
+*/
+
+
+document.write(`
+    <div>
+        <!-- Osama -->
+        Hello Div
+        <p>
+            Hello P
+        </p>
+        <span>
+            Hello Span
+        </span>
+        <!-- Comment -->
+        Hello
+    </div><hr>
+    `);
+
+var myElement = document.querySelector("div");
+
+console.log(myElement);
+console.log(myElement.children);
+console.log(myElement.children[0]);
+console.log(myElement.childNodes);
+console.log(myElement.childNodes[0]);
+
+console.log(myElement.firstChild);
+console.log(myElement.lastChild);
+
+console.log(myElement.firstElementChild);
+console.log(myElement.lastElementChild);
+
 // #__DOM Events__# //
 console.log("#------------------------ex_84------------------------#");
+/*
+    • DOM [Events]
+    - Use Events On HTML
+    - Use Events On JS
+        --- onclick
+        --- oncontextmenu
+        --- onmouseenter
+        --- onmouseleave
+
+        --- onload
+        --- onscroll
+        --- onresize
+
+        --- onfocus
+        --- onblur
+        --- onsubmit
+*/
+
+
+document.write(`
+    <button id="btn" onclick="console.log('Clicked')" style="padding: 10px 20px; font-size: 16px; background-color: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Button
+    </button>
+    <br><br>
+    <form action="">
+        <input type="text" />
+        <input type="submit" value="Submit Data"  />
+    </form>
+`);
+
+var myBtn = document.getElementById("btn");
+
+myBtn.onmouseleave = function () {
+    console.log("Clicked");
+};
+
+window.onresize = function () {
+    console.log("Scroll");
+};
 // #__Validate Form And Prevent Default__# //
 console.log("#------------------------ex_85------------------------#");
+
+/*
+    • DOM [Events]
+        - Validate Form Practice
+        - Prevent Default
+*/
+
+
+document.write(`
+    <hr>
+    <form id="myForm" action="">
+        <input type="text" name="username" placeholder="Max 10 Chars Only" /><br><br>
+        <input type="text" name="age" placeholder="Cant Be Empty" /><br><br>
+        <input type="submit" value="Submit Data" />
+    </form>
+    <br><br>
+    <a id="myLink" href="https://google.com">Google</a>
+    `);
+
+
+var userInput = document.querySelector("[name='username']");
+var ageInput = document.querySelector("[name='age']");
+
+document.getElementById("myForm").onsubmit = function (e) {
+    var userValid = false;
+    var ageValid = false;
+    if (userInput.value !== "" && userInput.value.length <= 10) {
+        userValid = true;
+    }
+    if (ageInput.value !== "") {
+        ageValid = true;
+    }
+    if (userValid === false || ageValid === false) {
+        e.preventDefault();
+    }
+};
+
+document.getElementById("myLink").onclick = function (event) {
+    console.log(event);
+    event.preventDefault();
+};
+
 // #__Event Simulation – Click, Focus, Blur__# //
 console.log("#------------------------ex_86------------------------#");
+/*
+  DOM [Events Simulation]
+  - click
+  - focus
+  - blur
+*/
+
+
+
+document.write(`
+    <hr>
+    <form action="">
+        <input class="one" type="text" placeholder="First Input" /><br><br>
+        <input class="two" type="text" placeholder="Second Input" /><br><br>
+        <input type="submit" value="Submit Data" />
+        </form>
+    <a id="myLink2" href="https://google.com">Google</a>
+    
+    `);
+var one = document.querySelector(".one");
+var two = document.querySelector(".two");
+
+window.onload = function () {
+    two.focus();
+};
+
+one.onblur = function () {
+    document.getElementById("myLink2").click();
+};
 // #__ClassList Object and Methods__# //
 console.log("#------------------------ex_87------------------------#");
+/*
+    • DOM [Class List]
+    - classList
+        --- length
+        --- contains
+        --- item(index)
+        --- add
+        --- remove
+        --- toggle
+*/
+
+document.write(`
+    <hr>
+    <div id="my-div1" class="one two show test">
+        Dive with many classes
+    </div>
+`);
+
+
+var element = document.getElementById("my-div1");
+
+console.log(element.classList);
+console.log(typeof element.classList);
+console.log(element.classList.contains("osama"));
+console.log(element.classList.contains("show"));
+console.log(element.classList.item("3"));
+
+element.onclick = function () {
+    element.classList.toggle("show");
+};
+
 // #__CSS Styling And Stylesheets__# //
 console.log("#------------------------ex_88------------------------#");
+/*
+  DOM [CSS]
+  - style
+  - cssText
+  - removeProperty(propertyName) [Inline, Stylesheet]
+  - setProperty(propertyName, value, priority)
+*/
+
+
+document.write(`
+    <hr>
+    <div id="my-div2" class="one two show test">
+        Dive with many classes
+    </div>
+`);
+var element = document.getElementById("my-div2");
+
+
+element.style.color = "red";
+element.style.fontWeight = "bold";
+
+element.style.cssText = "font-weight: bold; color: green; opacity: 0.9";
+
+element.style.removeProperty("color");
+element.style.setProperty("font-size", "40px", "important");
+
+document.styleSheets[0].rules[0].style.removeProperty("line-height");
+document.styleSheets[0].rules[0].style.setProperty("background-color", "red", "important");
+
 // #__Before, After, Prepend, Append, Remove__# //
 console.log("#------------------------ex_89------------------------#");
+/*
+  DOM [Deal With Elements]
+    - before [Element || String]
+    - after [Element || String]
+    - append [Element || String]
+    - prepend [Element || String]
+    - remove
+*/
+
+
+document.write(`
+    <hr>
+    <div id="my-div3">
+        Div Has 
+        <span>
+            Span
+        </span> 
+    </div>
+`);
+
+var element = document.getElementById("my-div3");
+var createdP = document.createElement("p");
+
+// element.before("Hello Before");
+// element.after("Hello After");
+
+// element.before(createdP);
+// element.after(createdP);
+
+element.append(" Hello Append ");
+element.prepend(" Hello Prepend ");
+
+
+
+// element.remove();
+
 // #__DOM Traversing__# //
 console.log("#------------------------ex_90------------------------#");
+/*
+    • DOM [Traversing]
+        - nextSibling
+        - previousSibling
+        - nextElementSibling
+        - previousElementSibling
+        - parentElement
+*/
+
+document.write(
+`
+<hr>
+    <div id="my-div4">
+        <span class="spanOne">
+        One
+            <!-- Comment -->
+        </span>
+        <span class="spanTwo">
+        Two
+            <!-- Comment -->
+        </span>
+        <span class="spanThree">
+        Three
+            <!-- Comment -->
+        </span>
+</div>
+`
+);
+
+var span = document.querySelector(".spanTwo");
+
+console.log(span.nextSibling);
+console.log(span.nextElementSibling);
+console.log(span.previousSibling);
+console.log(span.previousElementSibling);
+console.log(span.parentElement);
+
+
+span.onclick = function () {
+    span.parentElement.remove();
+}
 // #__DOM Cloning__# //
 console.log("#------------------------ex_91------------------------#");
 // #__addEventListener__# //
